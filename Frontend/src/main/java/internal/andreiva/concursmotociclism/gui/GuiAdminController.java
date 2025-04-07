@@ -7,6 +7,7 @@ import internal.andreiva.concursmotociclism.service.ServiceInterface;
 import internal.andreiva.concursmotociclism.utils.EventType;
 import internal.andreiva.concursmotociclism.utils.Observer;
 import javafx.animation.PauseTransition;
+import javafx.application.Platform;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
@@ -200,13 +201,15 @@ public class GuiAdminController extends AbstractGuiController implements Observe
     @Override
     public void update(EventType type, Object data)
     {
-        if (type.equals(EventType.RaceRegistration))
-        {
-            var race = (Race) data;
-            var index = raceClasses.indexOf(race.getRaceClass());
-            racesTables.get(index).refresh();
-            racesTables.get(-1).refresh();
-        }
+        Platform.runLater(() ->{
+            if (type.equals(EventType.RaceRegistration))
+            {
+                var race = (Race) data;
+                var index = raceClasses.indexOf(race.getRaceClass());
+                racesTables.get(index).refresh();
+                racesTables.get(-1).refresh();
+            }
+        });
     }
 
 }
