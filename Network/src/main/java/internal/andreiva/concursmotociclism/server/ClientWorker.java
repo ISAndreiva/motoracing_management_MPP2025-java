@@ -19,6 +19,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.UUID;
 import java.util.stream.StreamSupport;
 
@@ -318,6 +319,20 @@ public class ClientWorker implements Runnable, Observer
             if (race == null)
                 return new Response(ResponseType.Error, null);
             return new Response(ResponseType.GetRaceByName, RaceDTO.fromRace(race));
+        } catch (Exception e)
+        {
+            logger.error(e);
+            return new Response(ResponseType.Error, e.getMessage());
+        }
+    }
+
+    private Response handleGetRacesAndRacersNo(Request request)
+    {
+        try
+        {
+            var races = new HashMap<RaceDTO, Integer>();
+            service.getAllRaces().forEach(t -> races.put(RaceDTO.fromRace(t), service.getRacersCountForRace(t.getId())));
+            return new Response(ResponseType.GetRacesAndRacersNo, races);
         } catch (Exception e)
         {
             logger.error(e);

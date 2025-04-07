@@ -14,14 +14,15 @@ import internal.andreiva.concursmotociclism.utils.EventType;
 import internal.andreiva.concursmotociclism.utils.Observer;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicReference;
+
 
 public class ProxyService extends AbstractProxyService implements ServiceInterface
 {
-    Observer guiController = null;
+    private Observer guiController = null;
+    private Dictionary<Race, Integer> raceRacersNoCache = null;
+    private volatile boolean cacheValid = false;
 
     public ProxyService(String host, int port)
     {
@@ -40,7 +41,10 @@ public class ProxyService extends AbstractProxyService implements ServiceInterfa
         var event = (Event) response.data();
         if (event.type() == EventType.RaceRegistration)
             if (guiController != null)
+            {
+                cacheValid = false;
                 guiController.update(event.type(), ((RaceDTO) event.data()).toRace());
+            }
     }
 
     public void setGuiController(Observer guiController)
@@ -84,6 +88,7 @@ public class ProxyService extends AbstractProxyService implements ServiceInterfa
             var races = new ArrayList<Race>();
             var racesDTO = (ArrayList<RaceDTO>) response.data();
             racesDTO.forEach(r -> races.add(r.toRace()));
+
             return races;
         }
         return null;
@@ -120,13 +125,15 @@ public class ProxyService extends AbstractProxyService implements ServiceInterfa
             logger.error(e);
             return -1;
         }
-        sendRequest(new Request(RequestType.GetRacersCountForRace, raceId));
-        var response = readResponse();
-        if (response.type() == ResponseType.GetRacersCountForRace)
+        if (!cacheValid)
         {
-            return (int) response.data();
+            updateCache();
         }
-        return -1;
+        AtomicReference<Race> race = new AtomicReference<>();
+        raceRacersNoCache.keys().asIterator().forEachRemaining(r -> {if (r.getId().equals(raceId))
+            race.set(r);
+        });
+        return raceRacersNoCache.get(race.get());
     }
 
     @Override
@@ -264,16 +271,11 @@ public class ProxyService extends AbstractProxyService implements ServiceInterfa
             logger.error(e);
             return null;
         }
-        sendRequest(new Request(RequestType.GetAllRaces, null));
-        var response = readResponse();
-        if (response.type() == ResponseType.GetAllRaces)
+        if (!cacheValid)
         {
-            var races = new ArrayList<Race>();
-            var racesDTO = (ArrayList<RaceDTO>) response.data();
-            racesDTO.forEach(r -> races.add(r.toRace()));
-            return races;
+            updateCache();
         }
-        return null;
+        return Collections.list(raceRacersNoCache.keys());
     }
 
     @Override
@@ -314,5 +316,28 @@ public class ProxyService extends AbstractProxyService implements ServiceInterfa
             return ((RaceDTO) response.data()).toRace();
         }
         return null;
+    }
+
+    private void updateCache()
+    {
+        logger.info("Updating cache");
+        try
+        {
+            testConnection();
+        }catch (IOException e)
+        {
+            logger.error(e);
+        }
+        raceRacersNoCache = new Hashtable<>();
+        sendRequest(new Request(RequestType.GetRacesAndRacersNo, null));
+        var response = readResponse();
+        if (response.type() == ResponseType.GetRacesAndRacersNo)
+        {
+            var dict = (HashMap<RaceDTO, Integer>) response.data();
+            dict.forEach((r, n) -> {
+                raceRacersNoCache.put(r.toRace(), n);
+            });
+        }
+        cacheValid = true;
     }
 }

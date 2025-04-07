@@ -14,4 +14,5 @@ public enum ResponseType
     GetAllRaces,
     GetRaceByName,
     Update,
+    GetRacesAndRacersNo,
 }
