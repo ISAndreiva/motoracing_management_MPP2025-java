@@ -36,7 +36,7 @@ public class RacerDbRepository extends AbstractDbRepository<UUID, Racer> impleme
     public void add(Racer entity)
     {
         logger.traceEntry();
-        logger.info("Adding Racer to database");
+        logger.debug("Adding Racer to database");
 
         if (getRacerByCNP(entity.getCNP()) != null)
         {
@@ -65,7 +65,7 @@ public class RacerDbRepository extends AbstractDbRepository<UUID, Racer> impleme
     public void update(Racer entity)
     {
         logger.traceEntry();
-        logger.info("Updating Racer with id: {}", entity.getId());
+        logger.debug("Updating Racer with id: {}", entity.getId());
         String sql = "UPDATE racer SET name = ?, team = ?, cnp = ? WHERE uuid = ?";
         try
         {

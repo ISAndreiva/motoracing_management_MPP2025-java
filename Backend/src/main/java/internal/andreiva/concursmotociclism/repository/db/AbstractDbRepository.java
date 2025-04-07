@@ -29,7 +29,7 @@ public abstract class AbstractDbRepository<Id, E extends Entity<Id>> implements 
     protected Iterable<E> getEntitiesByField(String fieldName, Object fieldValue)
     {
         logger.traceEntry();
-        logger.info("Getting entities by field: {}  with value: {}", fieldName, fieldValue);
+        logger.debug("Getting entities by field: {}  with value: {}", fieldName, fieldValue);
         String sql;
         if (fieldValue == null)
             sql = "SELECT * FROM " + tableName;
@@ -68,7 +68,7 @@ public abstract class AbstractDbRepository<Id, E extends Entity<Id>> implements 
     {
         String sql = "SELECT * FROM " + tableName + " WHERE " + fieldName + " = ?";
         logger.traceEntry();
-        logger.info("Getting entity by id: {}", id);
+        logger.debug("Getting entity by id: {}", id);
         try
         {
             var connection = jdbcUtils.getConnection();
@@ -91,7 +91,7 @@ public abstract class AbstractDbRepository<Id, E extends Entity<Id>> implements 
     public Iterable<E> getAll()
     {
         logger.traceEntry();
-        logger.info("Getting all entities");
+        logger.debug("Getting all entities");
         return getEntitiesByField(null, null);
     }
 
@@ -99,7 +99,7 @@ public abstract class AbstractDbRepository<Id, E extends Entity<Id>> implements 
     public void remove(UUID id)
     {
         logger.traceEntry();
-        logger.info("Removing entity by id: {}", id);
+        logger.debug("Removing entity by id: {}", id);
         String sql = "DELETE FROM " + tableName + " WHERE uuid = ?";
         try
         {

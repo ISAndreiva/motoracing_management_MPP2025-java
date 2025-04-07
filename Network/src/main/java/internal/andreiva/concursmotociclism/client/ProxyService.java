@@ -62,10 +62,8 @@ public class ProxyService extends AbstractProxyService implements ServiceInterfa
         {
             initConnection();
         }
-        logger.info("Connected!");
         var userCrediantialsDTO = new UserCrediantialsDTO(username, password);
         sendRequest(new Request(RequestType.CheckUserPassword, userCrediantialsDTO));
-        logger.info("Sent request!");
         var response = readResponse();
         return response.type() == ResponseType.Ok;
     }

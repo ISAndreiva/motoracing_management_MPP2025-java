@@ -32,84 +32,84 @@ public class Service implements ServiceInterface
     @Override
     public boolean checkUserPassword(String username, String password)
     {
-        logger.info("Checking password for user: {}", username);
+        logger.debug("Checking password for user: {}", username);
         return userController.checkPassword(username, password);
     }
 
     @Override
     public Iterable<Race> getRacesByClass(int raceClass)
     {
-        logger.info("Getting races by class: {}", raceClass);
+        logger.debug("Getting races by class: {}", raceClass);
         return raceController.getRacesByClass(raceClass);
     }
 
     @Override
     public Iterable<Integer> getUsedRaceClasses()
     {
-        logger.info("Getting all used race classes");
+        logger.debug("Getting all used race classes");
         return raceController.getUsedRaceClasses();
     }
 
     @Override
     public int getRacersCountForRace(UUID raceId)
     {
-        logger.info("Getting number of racers registered for race {}", raceId);
+        logger.debug("Getting number of racers registered for race {}", raceId);
         return raceRegistrationController.getNumberOfRacersRegisteredForRace(raceId);
     }
 
     @Override
     public boolean checkUserExists(String username)
     {
-        logger.info("Checking if user exists: {}", username);
+        logger.debug("Checking if user exists: {}", username);
         return userController.checkUserExists(username);
     }
 
     @Override
     public Iterable<Racer> getRacersByTeam(UUID teamId)
     {
-        logger.info("Getting racers by team id {}", teamId);
+        logger.debug("Getting racers by team id {}", teamId);
         return racerController.getRacersByTeam(teamId);
     }
 
     @Override
     public Set<Integer> getRacerClasses(UUID racerId)
     {
-        logger.info("Getting racer classes for id {}", racerId);
+        logger.debug("Getting racer classes for id {}", racerId);
         return raceRegistrationController.getRacerClasses(racerId);
     }
 
     @Override
     public Iterable<Team> getTeamsByPartialName(String name)
     {
-        logger.info("Getting teams by partial name {}", name);
+        logger.debug("Getting teams by partial name {}", name);
         return teamController.getTeamsByPartialName(name);
     }
 
     @Override
     public Iterable<Team> getAllTeams()
     {
-        logger.info("Getting all teams");
+        logger.debug("Getting all teams");
         return teamController.getAllTeams();
     }
 
     @Override
     public void addRacer(Racer racer)
     {
-        logger.info("Adding racer {} with CNP {}", racer.getName(), racer.getCNP());
+        logger.debug("Adding racer {} with CNP {}", racer.getName(), racer.getCNP());
         racerController.addRacer(racer);
     }
 
     @Override
     public Iterable<Race> getAllRaces()
     {
-        logger.info("Getting all races");
+        logger.debug("Getting all races");
         return raceController.getAllRaces();
     }
 
     @Override
     public void addRaceRegistration(String racerName, String racerCNP, String teamName, String raceName)
     {
-        logger.info("Adding race registration for {} in race {}", racerName, raceName);
+        logger.debug("Adding race registration for {} in race {}", racerName, raceName);
         var racer = racerController.getRacerByCNP(racerCNP);
         if (racer == null)
         {
@@ -123,7 +123,7 @@ public class Service implements ServiceInterface
     @Override
     public Race getRaceByName(String raceName)
     {
-        logger.info("Getting race by name {}", raceName);
+        logger.debug("Getting race by name {}", raceName);
         return raceController.getRaceByName(raceName);
     }
 

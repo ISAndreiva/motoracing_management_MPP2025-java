@@ -32,7 +32,7 @@ public class TeamDbRepository extends AbstractDbRepository<UUID, Team> implement
     public void add(Team entity)
     {
         logger.traceEntry();
-        logger.info("Adding team to database");
+        logger.debug("Adding team to database");
         String sql = "INSERT INTO team VALUES(?, ?)";
         try
         {
@@ -51,7 +51,7 @@ public class TeamDbRepository extends AbstractDbRepository<UUID, Team> implement
     public void update(Team entity)
     {
         logger.traceEntry();
-        logger.info("Updating team with id: {}", entity.getId());
+        logger.debug("Updating team with id: {}", entity.getId());
         String sql = "UPDATE team SET name = ? WHERE uuid = ?";
         try
         {

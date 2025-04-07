@@ -31,7 +31,7 @@ public class UserDbRepository extends AbstractDbRepository<UUID, User> implement
     public void add(User entity)
     {
         logger.traceEntry();
-        logger.info("Adding user to database");
+        logger.debug("Adding user to database");
 
         if (getUserByUsername(entity.getUsername()) != null)
         {
@@ -58,7 +58,7 @@ public class UserDbRepository extends AbstractDbRepository<UUID, User> implement
     public void update(User entity)
     {
         logger.traceEntry();
-        logger.info("Updating user with id: {}", entity.getId());
+        logger.debug("Updating user with id: {}", entity.getId());
         String sql = "UPDATE user SET username=?, password_hash=? WHERE uuid=?";
         try
         {

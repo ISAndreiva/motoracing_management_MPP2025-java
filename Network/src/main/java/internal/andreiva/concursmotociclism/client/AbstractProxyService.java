@@ -70,7 +70,7 @@ public abstract class AbstractProxyService
                 try
                 {
                     var response = input.readObject();
-                    logger.info("Received response: {}", response.toString());
+                    logger.debug("Received response: {}", response.toString());
                     if (((Response) response).type() == ResponseType.Update)
                     {
                         handleUpdate((Response) response);
@@ -108,7 +108,7 @@ public abstract class AbstractProxyService
     {
         try
         {
-            logger.info("Sending request: {}", request.toString());
+            logger.debug("Sending request: {}", request.toString());
             output.writeObject(request);
             output.flush();
         }

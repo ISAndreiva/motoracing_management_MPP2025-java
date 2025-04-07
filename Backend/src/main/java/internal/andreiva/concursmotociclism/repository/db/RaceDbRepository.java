@@ -27,7 +27,7 @@ public class RaceDbRepository extends AbstractDbRepository<UUID, Race> implement
     public void add(Race entity)
     {
         logger.traceEntry();
-        logger.info("Adding new Race to database");
+        logger.debug("Adding new Race to database");
         String sql = "INSERT INTO race (uuid, name, class) VALUES (?, ?, ?)";
         try
         {
@@ -47,7 +47,7 @@ public class RaceDbRepository extends AbstractDbRepository<UUID, Race> implement
     public void update(Race entity)
     {
         logger.traceEntry();
-        logger.info("Updating Race with id: {}", entity.getId());
+        logger.debug("Updating Race with id: {}", entity.getId());
         String sql = "UPDATE race SET name = ?, class = ? WHERE uuid = ?";
         try
         {
@@ -73,7 +73,7 @@ public class RaceDbRepository extends AbstractDbRepository<UUID, Race> implement
     public Iterable<Race> getRacesByClass(int raceClass)
     {
         logger.traceEntry();
-        logger.info("Getting Races by class {}", raceClass);
+        logger.debug("Getting Races by class {}", raceClass);
         String sql = "SELECT * from race WHERE class = ?";
         var array = new ArrayList<Race>();
         try
@@ -98,7 +98,7 @@ public class RaceDbRepository extends AbstractDbRepository<UUID, Race> implement
     public Iterable<Integer> getUsedRaceClasses()
     {
         logger.traceEntry();
-        logger.info("Getting all used race classes");
+        logger.debug("Getting all used race classes");
         String sql = "SELECT DISTINCT class from race";
         var array = new ArrayList<Integer>();
         try

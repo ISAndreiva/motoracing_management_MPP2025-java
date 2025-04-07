@@ -40,7 +40,7 @@ public class RaceRegistrationDbRepository extends AbstractDbRepository<UUID, Rac
     public void add(RaceRegistration entity)
     {
         logger.traceEntry();
-        logger.info("Adding new RaceRegistration to database");
+        logger.debug("Adding new RaceRegistration to database");
         String sql = "INSERT INTO raceregistration(uuid, race, racer) VALUES (?, ?, ?)";
         try
         {
@@ -60,7 +60,7 @@ public class RaceRegistrationDbRepository extends AbstractDbRepository<UUID, Rac
     public void update(RaceRegistration entity)
     {
         logger.traceEntry();
-        logger.info("Updating RaceRegistration with id: {}", entity.getId());
+        logger.debug("Updating RaceRegistration with id: {}", entity.getId());
         String sql = "UPDATE raceregistration SET race = ?, racer = ? WHERE uuid = ?";
         try
         {
