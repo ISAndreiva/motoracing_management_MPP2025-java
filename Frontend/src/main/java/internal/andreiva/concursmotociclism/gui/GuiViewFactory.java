@@ -1,5 +1,6 @@
 package internal.andreiva.concursmotociclism.gui;
 
+import internal.andreiva.concursmotociclism.service.ObservableServiceInterface;
 import internal.andreiva.concursmotociclism.service.ServiceInterface;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,10 +15,10 @@ import java.io.IOException;
 
 public class GuiViewFactory extends Application
 {
-    private static ServiceInterface service;
+    private static ObservableServiceInterface service;
     private static Stage stage;
     protected final static Logger logger = LogManager.getLogger();
-    public static void setService(ServiceInterface service)
+    public static void setService(ObservableServiceInterface service)
     {
         GuiViewFactory.service = service;
     }

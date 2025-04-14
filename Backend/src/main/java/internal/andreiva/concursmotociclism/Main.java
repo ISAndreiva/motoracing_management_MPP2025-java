@@ -3,8 +3,7 @@ package internal.andreiva.concursmotociclism;
 import internal.andreiva.concursmotociclism.repository.db.*;
 import internal.andreiva.concursmotociclism.server.AbstractServer;
 import internal.andreiva.concursmotociclism.server.ConcurrentServer;
-import internal.andreiva.concursmotociclism.server.ObservableServiceWrapper;
-import internal.andreiva.concursmotociclism.service.Service;
+import internal.andreiva.concursmotociclism.service.ObservableService;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -31,8 +30,7 @@ public class Main
         var racerDbRepository = new RacerDbRepository(properties, teamDbRepository);
         var raceRegistrationDbRepository = new RaceRegistrationDbRepository(properties, racerDbRepository, raceDbRepository);
 
-        var service = new Service(userDbRepository, teamDbRepository, raceDbRepository, racerDbRepository, raceRegistrationDbRepository);
-        var observableService = new ObservableServiceWrapper(service);
+        var observableService = new ObservableService(userDbRepository, teamDbRepository, raceDbRepository, racerDbRepository, raceRegistrationDbRepository);
 
         if (!properties.getProperty("server.port").isEmpty())
         {

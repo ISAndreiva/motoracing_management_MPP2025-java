@@ -6,7 +6,7 @@ import internal.andreiva.concursmotociclism.communication.Response;
 import internal.andreiva.concursmotociclism.communication.ResponseType;
 import internal.andreiva.concursmotociclism.domain.Race;
 import internal.andreiva.concursmotociclism.dto.*;
-import internal.andreiva.concursmotociclism.service.ServiceInterface;
+import internal.andreiva.concursmotociclism.service.ObservableServiceInterface;
 import internal.andreiva.concursmotociclism.utils.Event;
 import internal.andreiva.concursmotociclism.utils.EventType;
 import internal.andreiva.concursmotociclism.utils.Observer;
@@ -27,18 +27,17 @@ import java.util.stream.StreamSupport;
 public class ClientWorker implements Runnable, Observer
 {
     protected final static Logger logger = LogManager.getLogger();
-    private final ServiceInterface service;
+    private final ObservableServiceInterface service;
     private final Socket socket;
 
     private final ObjectInputStream input;
     private final ObjectOutputStream output;
     private volatile boolean connected =  false;
 
-    public ClientWorker(ServiceInterface service, Socket socket)
+    public ClientWorker(ObservableServiceInterface service, Socket socket)
     {
         this.service = service;
-        if (service instanceof ObservableServiceWrapper)
-            ((ObservableServiceWrapper) service).registerObserver(this);
+        service.registerObserver(this);
 
         this.socket = socket;
         ObjectInputStream inputTemp = null;
@@ -95,8 +94,7 @@ public class ClientWorker implements Runnable, Observer
             input.close();
             output.close();
             socket.close();
-            if (service instanceof ObservableServiceWrapper)
-                ((ObservableServiceWrapper) service).unregisterObserver(this);
+            service.unregisterObserver(this);
         } catch (Exception e)
         {
             logger.error("Oh no, failed to close socket on exit, anyway. Here is why: ", e);
@@ -111,7 +109,7 @@ public class ClientWorker implements Runnable, Observer
         {
             var method = this.getClass().getDeclaredMethod(function, request.getClass());
             logger.debug("Received request of type: {} and handled with method {}", request.type(), function);
-            response = (Response) method.invoke(this, request);
+            response = (Response) method.invoke(this,   request);
         } catch (Exception e)
         {
             logger.error(e);

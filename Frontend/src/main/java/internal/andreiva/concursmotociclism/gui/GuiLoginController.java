@@ -27,7 +27,10 @@ public class GuiLoginController extends AbstractGuiController
                 if (service.checkUserExists(usernameTextField.getText()))
                 {
                     if (service.checkUserPassword(usernameTextField.getText(), PasswordHasher.hashPassword(passwordTextField.getText(), usernameTextField.getText())))
+                    {
+                        errorLabel.setText("");
                         GuiViewFactory.adminView();
+                    }
                     else
                     {
                         errorLabel.setText("Username or password is wrong!");

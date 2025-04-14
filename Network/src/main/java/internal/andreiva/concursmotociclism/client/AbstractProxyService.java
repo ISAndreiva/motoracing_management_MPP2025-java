@@ -82,6 +82,8 @@ public abstract class AbstractProxyService
                 } catch (EOFException ignored)  {
                 } catch (Exception e)
                 {
+                    if (!connected)
+                        continue;
                     logger.error(e);
                 }
             }

@@ -3,7 +3,7 @@ package internal.andreiva.concursmotociclism.gui;
 import internal.andreiva.concursmotociclism.client.ProxyService;
 import internal.andreiva.concursmotociclism.domain.Race;
 import internal.andreiva.concursmotociclism.domain.Racer;
-import internal.andreiva.concursmotociclism.service.ServiceInterface;
+import internal.andreiva.concursmotociclism.service.ObservableServiceInterface;
 import internal.andreiva.concursmotociclism.utils.EventType;
 import internal.andreiva.concursmotociclism.utils.Observer;
 import javafx.animation.PauseTransition;
@@ -51,11 +51,10 @@ public class GuiAdminController extends AbstractGuiController implements Observe
 
 
     @Override
-    public void setService(ServiceInterface service)
+    public void setService(ObservableServiceInterface service)
     {
         super.setService(service);
-        if (service instanceof ProxyService)
-            ((ProxyService) service).setGuiController(this);
+        service.registerObserver(this);
         createTabs();
         setUpRacerTable();
         setUpSearchField();
@@ -189,9 +188,9 @@ public class GuiAdminController extends AbstractGuiController implements Observe
     public void handleLogout()
     {
         childStages.forEach(Stage::close);
+        service.unregisterObserver(this);
         if (service instanceof ProxyService)
         {
-            ((ProxyService) service).setGuiController(null);
             ((ProxyService) service).closeConnection();
         }
         var currentStage = (Stage) racesTabPane.getScene().getWindow();

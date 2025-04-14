@@ -8,6 +8,7 @@ import internal.andreiva.concursmotociclism.domain.Race;
 import internal.andreiva.concursmotociclism.domain.Racer;
 import internal.andreiva.concursmotociclism.domain.Team;
 import internal.andreiva.concursmotociclism.dto.*;
+import internal.andreiva.concursmotociclism.service.ObservableServiceInterface;
 import internal.andreiva.concursmotociclism.service.ServiceInterface;
 import internal.andreiva.concursmotociclism.utils.Event;
 import internal.andreiva.concursmotociclism.utils.EventType;
@@ -18,9 +19,9 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
 
-public class ProxyService extends AbstractProxyService implements ServiceInterface
+public class ProxyService extends AbstractProxyService implements ObservableServiceInterface
 {
-    private Observer guiController = null;
+    private final List<Observer> observers = new ArrayList<>();
     private Dictionary<Race, Integer> raceRacersNoCache = null;
     private volatile boolean cacheValid = false;
 
@@ -40,16 +41,10 @@ public class ProxyService extends AbstractProxyService implements ServiceInterfa
         logger.info("Handling update: {}", response.toString());
         var event = (Event) response.data();
         if (event.type() == EventType.RaceRegistration)
-            if (guiController != null)
-            {
-                cacheValid = false;
-                guiController.update(event.type(), ((RaceDTO) event.data()).toRace());
-            }
-    }
-
-    public void setGuiController(Observer guiController)
-    {
-        this.guiController = guiController;
+        {
+            cacheValid = false;
+            notifyObservers(event.type(), ((RaceDTO) event.data()).toRace());
+        }
     }
 
     @Override
@@ -65,6 +60,8 @@ public class ProxyService extends AbstractProxyService implements ServiceInterfa
         var userCrediantialsDTO = new UserCrediantialsDTO(username, password);
         sendRequest(new Request(RequestType.CheckUserPassword, userCrediantialsDTO));
         var response = readResponse();
+        if (response.type().equals(ResponseType.Error))
+            closeConnection();
         return response.type() == ResponseType.Ok;
     }
 
@@ -146,6 +143,8 @@ public class ProxyService extends AbstractProxyService implements ServiceInterfa
         }
         sendRequest(new Request(RequestType.CheckUserExists, username));
         var response = readResponse();
+        if (response.type().equals(ResponseType.Error))
+            closeConnection();
         return response.type() == ResponseType.Ok;
     }
 
@@ -337,5 +336,22 @@ public class ProxyService extends AbstractProxyService implements ServiceInterfa
             });
         }
         cacheValid = true;
+    }
+
+    @Override
+    public void registerObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void unregisterObserver(Observer observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers(EventType type, Object data) {
+        for (Observer observer : observers) {
+            observer.update(type, data);
+        }
     }
 }

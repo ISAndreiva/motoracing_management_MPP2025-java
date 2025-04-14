@@ -1,20 +1,19 @@
 package internal.andreiva.concursmotociclism.server;
 
-import internal.andreiva.concursmotociclism.service.ServiceInterface;
-
+import internal.andreiva.concursmotociclism.service.ObservableServiceInterface;
 import java.net.Socket;
 
 public class ConcurrentServer extends AbstractServer
 {
-    private final ServiceInterface service;
+    private final ObservableServiceInterface service;
 
-    public ConcurrentServer(int port, ServiceInterface service)
+    public ConcurrentServer(int port, ObservableServiceInterface service)
     {
         super(port);
         this.service = service;
     }
 
-    public ConcurrentServer(ServiceInterface service)
+    public ConcurrentServer(ObservableServiceInterface service)
     {
         super();
         this.service = service;

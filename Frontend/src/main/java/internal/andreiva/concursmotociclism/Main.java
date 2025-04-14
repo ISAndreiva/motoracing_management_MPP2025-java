@@ -1,11 +1,9 @@
 package internal.andreiva.concursmotociclism;
 
 
-import internal.andreiva.concursmotociclism.client.AbstractProxyService;
 import internal.andreiva.concursmotociclism.client.ProxyService;
 import internal.andreiva.concursmotociclism.gui.GuiViewFactory;
-import internal.andreiva.concursmotociclism.service.ServiceInterface;
-
+import internal.andreiva.concursmotociclism.service.ObservableServiceInterface;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
@@ -23,7 +21,7 @@ public class Main
             throw new RuntimeException(e);
         }
 
-        AbstractProxyService service = null;
+        ObservableServiceInterface service = null;
         if (properties.getProperty("server.port").isEmpty() || properties.getProperty("server.host").isEmpty())
         {
             service = new ProxyService();
@@ -33,7 +31,7 @@ public class Main
             service = new ProxyService(properties.getProperty("server.host"), Integer.parseInt(properties.getProperty("server.port")));
         }
 
-        GuiViewFactory.setService((ServiceInterface) service);
+        GuiViewFactory.setService(service);
         GuiViewFactory.launch();
     }
 }
