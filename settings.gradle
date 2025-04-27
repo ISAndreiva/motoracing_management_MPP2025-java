@@ -2,4 +2,6 @@ rootProject.name = 'ConcorsMotociclism'
 include 'Frontend'
 include 'Common'
 include 'Network'
+include 'Network:proto'
+findProject(':Network:proto')?.name = 'proto'
 
