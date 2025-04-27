@@ -1,7 +1,7 @@
 package internal.andreiva.concursmotociclism;
 
 
-import internal.andreiva.concursmotociclism.client.ProxyService;
+import internal.andreiva.concursmotociclism.client.ProxyServiceRpc;
 import internal.andreiva.concursmotociclism.gui.GuiViewFactory;
 import internal.andreiva.concursmotociclism.service.ObservableServiceInterface;
 import java.io.FileReader;
@@ -24,11 +24,11 @@ public class Main
         ObservableServiceInterface service = null;
         if (properties.getProperty("server.port").isEmpty() || properties.getProperty("server.host").isEmpty())
         {
-            service = new ProxyService();
+            service = new ProxyServiceRpc();
         }
         else
         {
-            service = new ProxyService(properties.getProperty("server.host"), Integer.parseInt(properties.getProperty("server.port")));
+            service = new ProxyServiceRpc(properties.getProperty("server.host"), Integer.parseInt(properties.getProperty("server.port")));
         }
 
         GuiViewFactory.setService(service);
