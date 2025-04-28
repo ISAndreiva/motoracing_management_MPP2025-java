@@ -89,22 +89,22 @@ public final class Request {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rrequest.proto\032\014domain.proto\"/\n\030checkUs" +
-      "erPasswordRequest\022\023\n\004user\030\001 \001(\0132\005.User\"+" +
-      "\n\026getRacesByClassRequest\022\021\n\traceClass\030\001 " +
-      "\001(\005\".\n\034getRacersCountForRaceRequest\022\016\n\006r" +
-      "aceId\030\001 \001(\t\"*\n\026checkUserExistsRequest\022\020\n" +
-      "\010username\030\001 \001(\t\"(\n\026getRacersByTeamReques" +
-      "t\022\016\n\006teamId\030\001 \001(\t\")\n\026getRacerClassesRequ" +
-      "est\022\017\n\007racerId\030\001 \001(\t\"3\n\034getTeamsByPartia" +
-      "lNameRequest\022\023\n\013partialName\030\001 \001(\t\"(\n\017add" +
-      "RacerRequest\022\025\n\005racer\030\001 \001(\0132\006.Racer\"e\n\032a" +
-      "ddRaceRegistrationRequest\022\021\n\tracerName\030\001" +
-      " \001(\t\022\020\n\010racerCNP\030\002 \001(\t\022\020\n\010teamName\030\003 \001(\t" +
-      "\022\020\n\010raceName\030\004 \001(\t\"(\n\024getRaceByNameReque" +
-      "st\022\020\n\010raceName\030\001 \001(\t\"\016\n\014EmptyRequestB(\n$" +
-      "internal.andreiva.concursmotociclismP\001b\006" +
-      "proto3"
+      "\n\rrequest.proto\032\014domain.proto\"2\n\030checkUs" +
+      "erPasswordRequest\022\026\n\004user\030\001 \001(\0132\010.UserRp" +
+      "c\"+\n\026getRacesByClassRequest\022\021\n\traceClass" +
+      "\030\001 \001(\005\".\n\034getRacersCountForRaceRequest\022\016" +
+      "\n\006raceId\030\001 \001(\t\"*\n\026checkUserExistsRequest" +
+      "\022\020\n\010username\030\001 \001(\t\"(\n\026getRacersByTeamReq" +
+      "uest\022\016\n\006teamId\030\001 \001(\t\")\n\026getRacerClassesR" +
+      "equest\022\017\n\007racerId\030\001 \001(\t\"3\n\034getTeamsByPar" +
+      "tialNameRequest\022\023\n\013partialName\030\001 \001(\t\"+\n\017" +
+      "addRacerRequest\022\030\n\005racer\030\001 \001(\0132\t.RacerRp" +
+      "c\"e\n\032addRaceRegistrationRequest\022\021\n\tracer" +
+      "Name\030\001 \001(\t\022\020\n\010racerCNP\030\002 \001(\t\022\020\n\010teamName" +
+      "\030\003 \001(\t\022\020\n\010raceName\030\004 \001(\t\"(\n\024getRaceByNam" +
+      "eRequest\022\020\n\010raceName\030\001 \001(\t\"\016\n\014EmptyReque" +
+      "stB(\n$internal.andreiva.concursmotocicli" +
+      "smP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

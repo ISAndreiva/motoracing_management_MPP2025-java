@@ -44,9 +44,9 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int USER_FIELD_NUMBER = 1;
-  private internal.andreiva.concursmotociclism.User user_;
+  private internal.andreiva.concursmotociclism.UserRpc user_;
   /**
-   * <code>.User user = 1;</code>
+   * <code>.UserRpc user = 1;</code>
    * @return Whether the user field is set.
    */
   @java.lang.Override
@@ -54,19 +54,19 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.User user = 1;</code>
+   * <code>.UserRpc user = 1;</code>
    * @return The user.
    */
   @java.lang.Override
-  public internal.andreiva.concursmotociclism.User getUser() {
-    return user_ == null ? internal.andreiva.concursmotociclism.User.getDefaultInstance() : user_;
+  public internal.andreiva.concursmotociclism.UserRpc getUser() {
+    return user_ == null ? internal.andreiva.concursmotociclism.UserRpc.getDefaultInstance() : user_;
   }
   /**
-   * <code>.User user = 1;</code>
+   * <code>.UserRpc user = 1;</code>
    */
   @java.lang.Override
-  public internal.andreiva.concursmotociclism.UserOrBuilder getUserOrBuilder() {
-    return user_ == null ? internal.andreiva.concursmotociclism.User.getDefaultInstance() : user_;
+  public internal.andreiva.concursmotociclism.UserRpcOrBuilder getUserOrBuilder() {
+    return user_ == null ? internal.andreiva.concursmotociclism.UserRpc.getDefaultInstance() : user_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -384,31 +384,31 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private internal.andreiva.concursmotociclism.User user_;
+    private internal.andreiva.concursmotociclism.UserRpc user_;
     private com.google.protobuf.SingleFieldBuilder<
-        internal.andreiva.concursmotociclism.User, internal.andreiva.concursmotociclism.User.Builder, internal.andreiva.concursmotociclism.UserOrBuilder> userBuilder_;
+        internal.andreiva.concursmotociclism.UserRpc, internal.andreiva.concursmotociclism.UserRpc.Builder, internal.andreiva.concursmotociclism.UserRpcOrBuilder> userBuilder_;
     /**
-     * <code>.User user = 1;</code>
+     * <code>.UserRpc user = 1;</code>
      * @return Whether the user field is set.
      */
     public boolean hasUser() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.User user = 1;</code>
+     * <code>.UserRpc user = 1;</code>
      * @return The user.
      */
-    public internal.andreiva.concursmotociclism.User getUser() {
+    public internal.andreiva.concursmotociclism.UserRpc getUser() {
       if (userBuilder_ == null) {
-        return user_ == null ? internal.andreiva.concursmotociclism.User.getDefaultInstance() : user_;
+        return user_ == null ? internal.andreiva.concursmotociclism.UserRpc.getDefaultInstance() : user_;
       } else {
         return userBuilder_.getMessage();
       }
     }
     /**
-     * <code>.User user = 1;</code>
+     * <code>.UserRpc user = 1;</code>
      */
-    public Builder setUser(internal.andreiva.concursmotociclism.User value) {
+    public Builder setUser(internal.andreiva.concursmotociclism.UserRpc value) {
       if (userBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -422,10 +422,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.User user = 1;</code>
+     * <code>.UserRpc user = 1;</code>
      */
     public Builder setUser(
-        internal.andreiva.concursmotociclism.User.Builder builderForValue) {
+        internal.andreiva.concursmotociclism.UserRpc.Builder builderForValue) {
       if (userBuilder_ == null) {
         user_ = builderForValue.build();
       } else {
@@ -436,13 +436,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.User user = 1;</code>
+     * <code>.UserRpc user = 1;</code>
      */
-    public Builder mergeUser(internal.andreiva.concursmotociclism.User value) {
+    public Builder mergeUser(internal.andreiva.concursmotociclism.UserRpc value) {
       if (userBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           user_ != null &&
-          user_ != internal.andreiva.concursmotociclism.User.getDefaultInstance()) {
+          user_ != internal.andreiva.concursmotociclism.UserRpc.getDefaultInstance()) {
           getUserBuilder().mergeFrom(value);
         } else {
           user_ = value;
@@ -457,7 +457,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.User user = 1;</code>
+     * <code>.UserRpc user = 1;</code>
      */
     public Builder clearUser() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -470,33 +470,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.User user = 1;</code>
+     * <code>.UserRpc user = 1;</code>
      */
-    public internal.andreiva.concursmotociclism.User.Builder getUserBuilder() {
+    public internal.andreiva.concursmotociclism.UserRpc.Builder getUserBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return internalGetUserFieldBuilder().getBuilder();
     }
     /**
-     * <code>.User user = 1;</code>
+     * <code>.UserRpc user = 1;</code>
      */
-    public internal.andreiva.concursmotociclism.UserOrBuilder getUserOrBuilder() {
+    public internal.andreiva.concursmotociclism.UserRpcOrBuilder getUserOrBuilder() {
       if (userBuilder_ != null) {
         return userBuilder_.getMessageOrBuilder();
       } else {
         return user_ == null ?
-            internal.andreiva.concursmotociclism.User.getDefaultInstance() : user_;
+            internal.andreiva.concursmotociclism.UserRpc.getDefaultInstance() : user_;
       }
     }
     /**
-     * <code>.User user = 1;</code>
+     * <code>.UserRpc user = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        internal.andreiva.concursmotociclism.User, internal.andreiva.concursmotociclism.User.Builder, internal.andreiva.concursmotociclism.UserOrBuilder> 
+        internal.andreiva.concursmotociclism.UserRpc, internal.andreiva.concursmotociclism.UserRpc.Builder, internal.andreiva.concursmotociclism.UserRpcOrBuilder> 
         internalGetUserFieldBuilder() {
       if (userBuilder_ == null) {
         userBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            internal.andreiva.concursmotociclism.User, internal.andreiva.concursmotociclism.User.Builder, internal.andreiva.concursmotociclism.UserOrBuilder>(
+            internal.andreiva.concursmotociclism.UserRpc, internal.andreiva.concursmotociclism.UserRpc.Builder, internal.andreiva.concursmotociclism.UserRpcOrBuilder>(
                 getUser(),
                 getParentForChildren(),
                 isClean());

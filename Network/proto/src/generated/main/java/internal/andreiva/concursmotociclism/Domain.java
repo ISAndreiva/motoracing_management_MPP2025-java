@@ -26,35 +26,35 @@ public final class Domain {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Race_descriptor;
+    internal_static_RaceRpc_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Race_fieldAccessorTable;
+      internal_static_RaceRpc_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Team_descriptor;
+    internal_static_TeamRpc_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Team_fieldAccessorTable;
+      internal_static_TeamRpc_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Racer_descriptor;
+    internal_static_RacerRpc_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Racer_fieldAccessorTable;
+      internal_static_RacerRpc_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_RaceRegistration_descriptor;
+    internal_static_RaceRegistrationRpc_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_RaceRegistration_fieldAccessorTable;
+      internal_static_RaceRegistrationRpc_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_User_descriptor;
+    internal_static_UserRpc_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_User_fieldAccessorTable;
+      internal_static_UserRpc_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Event_descriptor;
+    internal_static_EventRpc_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Event_fieldAccessorTable;
+      internal_static_EventRpc_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -64,58 +64,59 @@ public final class Domain {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014domain.proto\"7\n\004Race\022\n\n\002id\030\001 \001(\t\022\021\n\tra" +
-      "ceClass\030\002 \001(\005\022\020\n\010raceName\030\003 \001(\t\" \n\004Team\022" +
-      "\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"C\n\005Racer\022\n\n\002id" +
-      "\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\004team\030\003 \001(\0132\005.Tea" +
-      "m\022\013\n\003cnp\030\004 \001(\t\"J\n\020RaceRegistration\022\n\n\002id" +
-      "\030\001 \001(\t\022\023\n\004race\030\002 \001(\0132\005.Race\022\025\n\005racer\030\003 \001" +
-      "(\0132\006.Racer\"6\n\004User\022\n\n\002id\030\001 \001(\t\022\020\n\010userna" +
-      "me\030\002 \001(\t\022\020\n\010password\030\003 \001(\t\"l\n\005Event\022\031\n\004t" +
-      "ype\030\001 \001(\0162\013.Event.Type\022\025\n\004race\030\002 \001(\0132\005.R" +
-      "aceH\000\")\n\004Type\022\013\n\007Unknown\020\000\022\024\n\020RaceRegist" +
-      "ration\020\001B\006\n\004dataB(\n$internal.andreiva.co" +
-      "ncursmotociclismP\001b\006proto3"
+      "\n\014domain.proto\":\n\007RaceRpc\022\n\n\002id\030\001 \001(\t\022\021\n" +
+      "\traceClass\030\002 \001(\005\022\020\n\010raceName\030\003 \001(\t\"#\n\007Te" +
+      "amRpc\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"I\n\010Racer" +
+      "Rpc\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\026\n\004team\030\003 " +
+      "\001(\0132\010.TeamRpc\022\013\n\003cnp\030\004 \001(\t\"S\n\023RaceRegist" +
+      "rationRpc\022\n\n\002id\030\001 \001(\t\022\026\n\004race\030\002 \001(\0132\010.Ra" +
+      "ceRpc\022\030\n\005racer\030\003 \001(\0132\t.RacerRpc\"9\n\007UserR" +
+      "pc\022\n\n\002id\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\020\n\010pass" +
+      "word\030\003 \001(\t\"u\n\010EventRpc\022\034\n\004type\030\001 \001(\0162\016.E" +
+      "ventRpc.Type\022\030\n\004race\030\002 \001(\0132\010.RaceRpcH\000\")" +
+      "\n\004Type\022\013\n\007Unknown\020\000\022\024\n\020RaceRegistration\020" +
+      "\001B\006\n\004dataB(\n$internal.andreiva.concursmo" +
+      "tociclismP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_Race_descriptor =
+    internal_static_RaceRpc_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_Race_fieldAccessorTable = new
+    internal_static_RaceRpc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_Race_descriptor,
+        internal_static_RaceRpc_descriptor,
         new java.lang.String[] { "Id", "RaceClass", "RaceName", });
-    internal_static_Team_descriptor =
+    internal_static_TeamRpc_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_Team_fieldAccessorTable = new
+    internal_static_TeamRpc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_Team_descriptor,
+        internal_static_TeamRpc_descriptor,
         new java.lang.String[] { "Id", "Name", });
-    internal_static_Racer_descriptor =
+    internal_static_RacerRpc_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_Racer_fieldAccessorTable = new
+    internal_static_RacerRpc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_Racer_descriptor,
+        internal_static_RacerRpc_descriptor,
         new java.lang.String[] { "Id", "Name", "Team", "Cnp", });
-    internal_static_RaceRegistration_descriptor =
+    internal_static_RaceRegistrationRpc_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_RaceRegistration_fieldAccessorTable = new
+    internal_static_RaceRegistrationRpc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_RaceRegistration_descriptor,
+        internal_static_RaceRegistrationRpc_descriptor,
         new java.lang.String[] { "Id", "Race", "Racer", });
-    internal_static_User_descriptor =
+    internal_static_UserRpc_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_User_fieldAccessorTable = new
+    internal_static_UserRpc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_User_descriptor,
+        internal_static_UserRpc_descriptor,
         new java.lang.String[] { "Id", "Username", "Password", });
-    internal_static_Event_descriptor =
+    internal_static_EventRpc_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_Event_fieldAccessorTable = new
+    internal_static_EventRpc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_Event_descriptor,
+        internal_static_EventRpc_descriptor,
         new java.lang.String[] { "Type", "Race", "Data", });
     descriptor.resolveAllFeaturesImmutable();
   }

@@ -10,17 +10,17 @@ public interface getRaceByNameResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.Race race = 1;</code>
+   * <code>.RaceRpc race = 1;</code>
    * @return Whether the race field is set.
    */
   boolean hasRace();
   /**
-   * <code>.Race race = 1;</code>
+   * <code>.RaceRpc race = 1;</code>
    * @return The race.
    */
-  internal.andreiva.concursmotociclism.Race getRace();
+  internal.andreiva.concursmotociclism.RaceRpc getRace();
   /**
-   * <code>.Race race = 1;</code>
+   * <code>.RaceRpc race = 1;</code>
    */
-  internal.andreiva.concursmotociclism.RaceOrBuilder getRaceOrBuilder();
+  internal.andreiva.concursmotociclism.RaceRpcOrBuilder getRaceOrBuilder();
 }

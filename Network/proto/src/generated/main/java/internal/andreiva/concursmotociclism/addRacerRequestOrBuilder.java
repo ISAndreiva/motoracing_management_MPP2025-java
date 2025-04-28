@@ -10,17 +10,17 @@ public interface addRacerRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.Racer racer = 1;</code>
+   * <code>.RacerRpc racer = 1;</code>
    * @return Whether the racer field is set.
    */
   boolean hasRacer();
   /**
-   * <code>.Racer racer = 1;</code>
+   * <code>.RacerRpc racer = 1;</code>
    * @return The racer.
    */
-  internal.andreiva.concursmotociclism.Racer getRacer();
+  internal.andreiva.concursmotociclism.RacerRpc getRacer();
   /**
-   * <code>.Racer racer = 1;</code>
+   * <code>.RacerRpc racer = 1;</code>
    */
-  internal.andreiva.concursmotociclism.RacerOrBuilder getRacerOrBuilder();
+  internal.andreiva.concursmotociclism.RacerRpcOrBuilder getRacerOrBuilder();
 }

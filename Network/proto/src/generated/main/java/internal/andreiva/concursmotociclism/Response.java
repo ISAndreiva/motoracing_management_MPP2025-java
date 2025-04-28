@@ -96,22 +96,22 @@ public final class Response {
     java.lang.String[] descriptorData = {
       "\n\016response.proto\032\014domain.proto\"1\n\031checkU" +
       "serPasswordResponse\022\024\n\014passwordGood\030\001 \001(" +
-      "\010\"/\n\027getRacesByClassResponse\022\024\n\005races\030\001 " +
-      "\003(\0132\005.Race\"1\n\032getUsedRaceClassesResponse" +
-      "\022\023\n\013raceClasses\030\001 \003(\005\"4\n\035getRacersCountF" +
-      "orRaceResponse\022\023\n\013racersCount\030\001 \001(\005\")\n\027C" +
-      "heckUserExistsResponse\022\016\n\006exists\030\001 \001(\010\"1" +
-      "\n\027getRacersByTeamResponse\022\026\n\006racers\030\001 \003(" +
-      "\0132\006.Racer\"*\n\027getRacerClassesResponse\022\017\n\007" +
-      "classes\030\001 \003(\005\"5\n\035getTeamsByPartialNameRe" +
-      "sponse\022\024\n\005teams\030\001 \003(\0132\005.Team\"+\n\023getAllTe" +
-      "amsResponse\022\024\n\005teams\030\001 \003(\0132\005.Team\"+\n\023get" +
-      "AllRacesResponse\022\024\n\005races\030\001 \003(\0132\005.Race\"," +
-      "\n\025getRaceByNameResponse\022\023\n\004race\030\001 \001(\0132\005." +
-      "Race\"U\n\016StatusResponse\022&\n\006status\030\001 \001(\0162\026" +
-      ".StatusResponse.Status\"\033\n\006Status\022\006\n\002OK\020\000" +
-      "\022\t\n\005ERROR\020\001B(\n$internal.andreiva.concurs" +
-      "motociclismP\001b\006proto3"
+      "\010\"2\n\027getRacesByClassResponse\022\027\n\005races\030\001 " +
+      "\003(\0132\010.RaceRpc\"1\n\032getUsedRaceClassesRespo" +
+      "nse\022\023\n\013raceClasses\030\001 \003(\005\"4\n\035getRacersCou" +
+      "ntForRaceResponse\022\023\n\013racersCount\030\001 \001(\005\")" +
+      "\n\027CheckUserExistsResponse\022\016\n\006exists\030\001 \001(" +
+      "\010\"4\n\027getRacersByTeamResponse\022\031\n\006racers\030\001" +
+      " \003(\0132\t.RacerRpc\"*\n\027getRacerClassesRespon" +
+      "se\022\017\n\007classes\030\001 \003(\005\"8\n\035getTeamsByPartial" +
+      "NameResponse\022\027\n\005teams\030\001 \003(\0132\010.TeamRpc\".\n" +
+      "\023getAllTeamsResponse\022\027\n\005teams\030\001 \003(\0132\010.Te" +
+      "amRpc\".\n\023getAllRacesResponse\022\027\n\005races\030\001 " +
+      "\003(\0132\010.RaceRpc\"/\n\025getRaceByNameResponse\022\026" +
+      "\n\004race\030\001 \001(\0132\010.RaceRpc\"U\n\016StatusResponse" +
+      "\022&\n\006status\030\001 \001(\0162\026.StatusResponse.Status" +
+      "\"\033\n\006Status\022\006\n\002OK\020\000\022\t\n\005ERROR\020\001B(\n$interna" +
+      "l.andreiva.concursmotociclismP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

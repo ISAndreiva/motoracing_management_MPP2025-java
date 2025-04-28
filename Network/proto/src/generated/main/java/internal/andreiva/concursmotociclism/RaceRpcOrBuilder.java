@@ -5,8 +5,8 @@
 
 package internal.andreiva.concursmotociclism;
 
-public interface RaceOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:Race)
+public interface RaceRpcOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:RaceRpc)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -6,12 +6,12 @@
 package internal.andreiva.concursmotociclism;
 
 /**
- * Protobuf type {@code Racer}
+ * Protobuf type {@code RacerRpc}
  */
-public final class Racer extends
+public final class RacerRpc extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:Racer)
-    RacerOrBuilder {
+    // @@protoc_insertion_point(message_implements:RacerRpc)
+    RacerRpcOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -20,13 +20,13 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 30,
       /* patch= */ 1,
       /* suffix= */ "",
-      Racer.class.getName());
+      RacerRpc.class.getName());
   }
-  // Use Racer.newBuilder() to construct.
-  private Racer(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use RacerRpc.newBuilder() to construct.
+  private RacerRpc(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private Racer() {
+  private RacerRpc() {
     id_ = "";
     name_ = "";
     cnp_ = "";
@@ -34,15 +34,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return internal.andreiva.concursmotociclism.Domain.internal_static_Racer_descriptor;
+    return internal.andreiva.concursmotociclism.Domain.internal_static_RacerRpc_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return internal.andreiva.concursmotociclism.Domain.internal_static_Racer_fieldAccessorTable
+    return internal.andreiva.concursmotociclism.Domain.internal_static_RacerRpc_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            internal.andreiva.concursmotociclism.Racer.class, internal.andreiva.concursmotociclism.Racer.Builder.class);
+            internal.andreiva.concursmotociclism.RacerRpc.class, internal.andreiva.concursmotociclism.RacerRpc.Builder.class);
   }
 
   private int bitField0_;
@@ -125,9 +125,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEAM_FIELD_NUMBER = 3;
-  private internal.andreiva.concursmotociclism.Team team_;
+  private internal.andreiva.concursmotociclism.TeamRpc team_;
   /**
-   * <code>.Team team = 3;</code>
+   * <code>.TeamRpc team = 3;</code>
    * @return Whether the team field is set.
    */
   @java.lang.Override
@@ -135,19 +135,19 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.Team team = 3;</code>
+   * <code>.TeamRpc team = 3;</code>
    * @return The team.
    */
   @java.lang.Override
-  public internal.andreiva.concursmotociclism.Team getTeam() {
-    return team_ == null ? internal.andreiva.concursmotociclism.Team.getDefaultInstance() : team_;
+  public internal.andreiva.concursmotociclism.TeamRpc getTeam() {
+    return team_ == null ? internal.andreiva.concursmotociclism.TeamRpc.getDefaultInstance() : team_;
   }
   /**
-   * <code>.Team team = 3;</code>
+   * <code>.TeamRpc team = 3;</code>
    */
   @java.lang.Override
-  public internal.andreiva.concursmotociclism.TeamOrBuilder getTeamOrBuilder() {
-    return team_ == null ? internal.andreiva.concursmotociclism.Team.getDefaultInstance() : team_;
+  public internal.andreiva.concursmotociclism.TeamRpcOrBuilder getTeamOrBuilder() {
+    return team_ == null ? internal.andreiva.concursmotociclism.TeamRpc.getDefaultInstance() : team_;
   }
 
   public static final int CNP_FIELD_NUMBER = 4;
@@ -247,10 +247,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof internal.andreiva.concursmotociclism.Racer)) {
+    if (!(obj instanceof internal.andreiva.concursmotociclism.RacerRpc)) {
       return super.equals(obj);
     }
-    internal.andreiva.concursmotociclism.Racer other = (internal.andreiva.concursmotociclism.Racer) obj;
+    internal.andreiva.concursmotociclism.RacerRpc other = (internal.andreiva.concursmotociclism.RacerRpc) obj;
 
     if (!getId()
         .equals(other.getId())) return false;
@@ -289,44 +289,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static internal.andreiva.concursmotociclism.Racer parseFrom(
+  public static internal.andreiva.concursmotociclism.RacerRpc parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static internal.andreiva.concursmotociclism.Racer parseFrom(
+  public static internal.andreiva.concursmotociclism.RacerRpc parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static internal.andreiva.concursmotociclism.Racer parseFrom(
+  public static internal.andreiva.concursmotociclism.RacerRpc parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static internal.andreiva.concursmotociclism.Racer parseFrom(
+  public static internal.andreiva.concursmotociclism.RacerRpc parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static internal.andreiva.concursmotociclism.Racer parseFrom(byte[] data)
+  public static internal.andreiva.concursmotociclism.RacerRpc parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static internal.andreiva.concursmotociclism.Racer parseFrom(
+  public static internal.andreiva.concursmotociclism.RacerRpc parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static internal.andreiva.concursmotociclism.Racer parseFrom(java.io.InputStream input)
+  public static internal.andreiva.concursmotociclism.RacerRpc parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static internal.andreiva.concursmotociclism.Racer parseFrom(
+  public static internal.andreiva.concursmotociclism.RacerRpc parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -334,26 +334,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static internal.andreiva.concursmotociclism.Racer parseDelimitedFrom(java.io.InputStream input)
+  public static internal.andreiva.concursmotociclism.RacerRpc parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static internal.andreiva.concursmotociclism.Racer parseDelimitedFrom(
+  public static internal.andreiva.concursmotociclism.RacerRpc parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static internal.andreiva.concursmotociclism.Racer parseFrom(
+  public static internal.andreiva.concursmotociclism.RacerRpc parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static internal.andreiva.concursmotociclism.Racer parseFrom(
+  public static internal.andreiva.concursmotociclism.RacerRpc parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -366,7 +366,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(internal.andreiva.concursmotociclism.Racer prototype) {
+  public static Builder newBuilder(internal.andreiva.concursmotociclism.RacerRpc prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -382,26 +382,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code Racer}
+   * Protobuf type {@code RacerRpc}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:Racer)
-      internal.andreiva.concursmotociclism.RacerOrBuilder {
+      // @@protoc_insertion_point(builder_implements:RacerRpc)
+      internal.andreiva.concursmotociclism.RacerRpcOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return internal.andreiva.concursmotociclism.Domain.internal_static_Racer_descriptor;
+      return internal.andreiva.concursmotociclism.Domain.internal_static_RacerRpc_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return internal.andreiva.concursmotociclism.Domain.internal_static_Racer_fieldAccessorTable
+      return internal.andreiva.concursmotociclism.Domain.internal_static_RacerRpc_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              internal.andreiva.concursmotociclism.Racer.class, internal.andreiva.concursmotociclism.Racer.Builder.class);
+              internal.andreiva.concursmotociclism.RacerRpc.class, internal.andreiva.concursmotociclism.RacerRpc.Builder.class);
     }
 
-    // Construct using internal.andreiva.concursmotociclism.Racer.newBuilder()
+    // Construct using internal.andreiva.concursmotociclism.RacerRpc.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -435,17 +435,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return internal.andreiva.concursmotociclism.Domain.internal_static_Racer_descriptor;
+      return internal.andreiva.concursmotociclism.Domain.internal_static_RacerRpc_descriptor;
     }
 
     @java.lang.Override
-    public internal.andreiva.concursmotociclism.Racer getDefaultInstanceForType() {
-      return internal.andreiva.concursmotociclism.Racer.getDefaultInstance();
+    public internal.andreiva.concursmotociclism.RacerRpc getDefaultInstanceForType() {
+      return internal.andreiva.concursmotociclism.RacerRpc.getDefaultInstance();
     }
 
     @java.lang.Override
-    public internal.andreiva.concursmotociclism.Racer build() {
-      internal.andreiva.concursmotociclism.Racer result = buildPartial();
+    public internal.andreiva.concursmotociclism.RacerRpc build() {
+      internal.andreiva.concursmotociclism.RacerRpc result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -453,14 +453,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public internal.andreiva.concursmotociclism.Racer buildPartial() {
-      internal.andreiva.concursmotociclism.Racer result = new internal.andreiva.concursmotociclism.Racer(this);
+    public internal.andreiva.concursmotociclism.RacerRpc buildPartial() {
+      internal.andreiva.concursmotociclism.RacerRpc result = new internal.andreiva.concursmotociclism.RacerRpc(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(internal.andreiva.concursmotociclism.Racer result) {
+    private void buildPartial0(internal.andreiva.concursmotociclism.RacerRpc result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.id_ = id_;
@@ -483,16 +483,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof internal.andreiva.concursmotociclism.Racer) {
-        return mergeFrom((internal.andreiva.concursmotociclism.Racer)other);
+      if (other instanceof internal.andreiva.concursmotociclism.RacerRpc) {
+        return mergeFrom((internal.andreiva.concursmotociclism.RacerRpc)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(internal.andreiva.concursmotociclism.Racer other) {
-      if (other == internal.andreiva.concursmotociclism.Racer.getDefaultInstance()) return this;
+    public Builder mergeFrom(internal.andreiva.concursmotociclism.RacerRpc other) {
+      if (other == internal.andreiva.concursmotociclism.RacerRpc.getDefaultInstance()) return this;
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
         bitField0_ |= 0x00000001;
@@ -720,31 +720,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private internal.andreiva.concursmotociclism.Team team_;
+    private internal.andreiva.concursmotociclism.TeamRpc team_;
     private com.google.protobuf.SingleFieldBuilder<
-        internal.andreiva.concursmotociclism.Team, internal.andreiva.concursmotociclism.Team.Builder, internal.andreiva.concursmotociclism.TeamOrBuilder> teamBuilder_;
+        internal.andreiva.concursmotociclism.TeamRpc, internal.andreiva.concursmotociclism.TeamRpc.Builder, internal.andreiva.concursmotociclism.TeamRpcOrBuilder> teamBuilder_;
     /**
-     * <code>.Team team = 3;</code>
+     * <code>.TeamRpc team = 3;</code>
      * @return Whether the team field is set.
      */
     public boolean hasTeam() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.Team team = 3;</code>
+     * <code>.TeamRpc team = 3;</code>
      * @return The team.
      */
-    public internal.andreiva.concursmotociclism.Team getTeam() {
+    public internal.andreiva.concursmotociclism.TeamRpc getTeam() {
       if (teamBuilder_ == null) {
-        return team_ == null ? internal.andreiva.concursmotociclism.Team.getDefaultInstance() : team_;
+        return team_ == null ? internal.andreiva.concursmotociclism.TeamRpc.getDefaultInstance() : team_;
       } else {
         return teamBuilder_.getMessage();
       }
     }
     /**
-     * <code>.Team team = 3;</code>
+     * <code>.TeamRpc team = 3;</code>
      */
-    public Builder setTeam(internal.andreiva.concursmotociclism.Team value) {
+    public Builder setTeam(internal.andreiva.concursmotociclism.TeamRpc value) {
       if (teamBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -758,10 +758,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Team team = 3;</code>
+     * <code>.TeamRpc team = 3;</code>
      */
     public Builder setTeam(
-        internal.andreiva.concursmotociclism.Team.Builder builderForValue) {
+        internal.andreiva.concursmotociclism.TeamRpc.Builder builderForValue) {
       if (teamBuilder_ == null) {
         team_ = builderForValue.build();
       } else {
@@ -772,13 +772,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Team team = 3;</code>
+     * <code>.TeamRpc team = 3;</code>
      */
-    public Builder mergeTeam(internal.andreiva.concursmotociclism.Team value) {
+    public Builder mergeTeam(internal.andreiva.concursmotociclism.TeamRpc value) {
       if (teamBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           team_ != null &&
-          team_ != internal.andreiva.concursmotociclism.Team.getDefaultInstance()) {
+          team_ != internal.andreiva.concursmotociclism.TeamRpc.getDefaultInstance()) {
           getTeamBuilder().mergeFrom(value);
         } else {
           team_ = value;
@@ -793,7 +793,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Team team = 3;</code>
+     * <code>.TeamRpc team = 3;</code>
      */
     public Builder clearTeam() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -806,33 +806,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Team team = 3;</code>
+     * <code>.TeamRpc team = 3;</code>
      */
-    public internal.andreiva.concursmotociclism.Team.Builder getTeamBuilder() {
+    public internal.andreiva.concursmotociclism.TeamRpc.Builder getTeamBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return internalGetTeamFieldBuilder().getBuilder();
     }
     /**
-     * <code>.Team team = 3;</code>
+     * <code>.TeamRpc team = 3;</code>
      */
-    public internal.andreiva.concursmotociclism.TeamOrBuilder getTeamOrBuilder() {
+    public internal.andreiva.concursmotociclism.TeamRpcOrBuilder getTeamOrBuilder() {
       if (teamBuilder_ != null) {
         return teamBuilder_.getMessageOrBuilder();
       } else {
         return team_ == null ?
-            internal.andreiva.concursmotociclism.Team.getDefaultInstance() : team_;
+            internal.andreiva.concursmotociclism.TeamRpc.getDefaultInstance() : team_;
       }
     }
     /**
-     * <code>.Team team = 3;</code>
+     * <code>.TeamRpc team = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        internal.andreiva.concursmotociclism.Team, internal.andreiva.concursmotociclism.Team.Builder, internal.andreiva.concursmotociclism.TeamOrBuilder> 
+        internal.andreiva.concursmotociclism.TeamRpc, internal.andreiva.concursmotociclism.TeamRpc.Builder, internal.andreiva.concursmotociclism.TeamRpcOrBuilder> 
         internalGetTeamFieldBuilder() {
       if (teamBuilder_ == null) {
         teamBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            internal.andreiva.concursmotociclism.Team, internal.andreiva.concursmotociclism.Team.Builder, internal.andreiva.concursmotociclism.TeamOrBuilder>(
+            internal.andreiva.concursmotociclism.TeamRpc, internal.andreiva.concursmotociclism.TeamRpc.Builder, internal.andreiva.concursmotociclism.TeamRpcOrBuilder>(
                 getTeam(),
                 getParentForChildren(),
                 isClean());
@@ -913,23 +913,23 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    // @@protoc_insertion_point(builder_scope:Racer)
+    // @@protoc_insertion_point(builder_scope:RacerRpc)
   }
 
-  // @@protoc_insertion_point(class_scope:Racer)
-  private static final internal.andreiva.concursmotociclism.Racer DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:RacerRpc)
+  private static final internal.andreiva.concursmotociclism.RacerRpc DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new internal.andreiva.concursmotociclism.Racer();
+    DEFAULT_INSTANCE = new internal.andreiva.concursmotociclism.RacerRpc();
   }
 
-  public static internal.andreiva.concursmotociclism.Racer getDefaultInstance() {
+  public static internal.andreiva.concursmotociclism.RacerRpc getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Racer>
-      PARSER = new com.google.protobuf.AbstractParser<Racer>() {
+  private static final com.google.protobuf.Parser<RacerRpc>
+      PARSER = new com.google.protobuf.AbstractParser<RacerRpc>() {
     @java.lang.Override
-    public Racer parsePartialFrom(
+    public RacerRpc parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -948,17 +948,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<Racer> parser() {
+  public static com.google.protobuf.Parser<RacerRpc> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Racer> getParserForType() {
+  public com.google.protobuf.Parser<RacerRpc> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public internal.andreiva.concursmotociclism.Racer getDefaultInstanceForType() {
+  public internal.andreiva.concursmotociclism.RacerRpc getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

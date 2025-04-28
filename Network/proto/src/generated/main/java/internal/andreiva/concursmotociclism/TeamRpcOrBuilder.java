@@ -5,8 +5,8 @@
 
 package internal.andreiva.concursmotociclism;
 
-public interface RacerOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:Racer)
+public interface TeamRpcOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:TeamRpc)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -32,31 +32,4 @@ public interface RacerOrBuilder extends
    */
   com.google.protobuf.ByteString
       getNameBytes();
-
-  /**
-   * <code>.Team team = 3;</code>
-   * @return Whether the team field is set.
-   */
-  boolean hasTeam();
-  /**
-   * <code>.Team team = 3;</code>
-   * @return The team.
-   */
-  internal.andreiva.concursmotociclism.Team getTeam();
-  /**
-   * <code>.Team team = 3;</code>
-   */
-  internal.andreiva.concursmotociclism.TeamOrBuilder getTeamOrBuilder();
-
-  /**
-   * <code>string cnp = 4;</code>
-   * @return The cnp.
-   */
-  java.lang.String getCnp();
-  /**
-   * <code>string cnp = 4;</code>
-   * @return The bytes for cnp.
-   */
-  com.google.protobuf.ByteString
-      getCnpBytes();
 }

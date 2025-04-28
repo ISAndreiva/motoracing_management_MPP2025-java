@@ -5,8 +5,8 @@
 
 package internal.andreiva.concursmotociclism;
 
-public interface RaceRegistrationOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:RaceRegistration)
+public interface RaceRegistrationRpcOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:RaceRegistrationRpc)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -22,32 +22,32 @@ public interface RaceRegistrationOrBuilder extends
       getIdBytes();
 
   /**
-   * <code>.Race race = 2;</code>
+   * <code>.RaceRpc race = 2;</code>
    * @return Whether the race field is set.
    */
   boolean hasRace();
   /**
-   * <code>.Race race = 2;</code>
+   * <code>.RaceRpc race = 2;</code>
    * @return The race.
    */
-  internal.andreiva.concursmotociclism.Race getRace();
+  internal.andreiva.concursmotociclism.RaceRpc getRace();
   /**
-   * <code>.Race race = 2;</code>
+   * <code>.RaceRpc race = 2;</code>
    */
-  internal.andreiva.concursmotociclism.RaceOrBuilder getRaceOrBuilder();
+  internal.andreiva.concursmotociclism.RaceRpcOrBuilder getRaceOrBuilder();
 
   /**
-   * <code>.Racer racer = 3;</code>
+   * <code>.RacerRpc racer = 3;</code>
    * @return Whether the racer field is set.
    */
   boolean hasRacer();
   /**
-   * <code>.Racer racer = 3;</code>
+   * <code>.RacerRpc racer = 3;</code>
    * @return The racer.
    */
-  internal.andreiva.concursmotociclism.Racer getRacer();
+  internal.andreiva.concursmotociclism.RacerRpc getRacer();
   /**
-   * <code>.Racer racer = 3;</code>
+   * <code>.RacerRpc racer = 3;</code>
    */
-  internal.andreiva.concursmotociclism.RacerOrBuilder getRacerOrBuilder();
+  internal.andreiva.concursmotociclism.RacerRpcOrBuilder getRacerOrBuilder();
 }

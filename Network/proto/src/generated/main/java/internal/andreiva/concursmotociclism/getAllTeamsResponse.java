@@ -45,41 +45,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int TEAMS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<internal.andreiva.concursmotociclism.Team> teams_;
+  private java.util.List<internal.andreiva.concursmotociclism.TeamRpc> teams_;
   /**
-   * <code>repeated .Team teams = 1;</code>
+   * <code>repeated .TeamRpc teams = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<internal.andreiva.concursmotociclism.Team> getTeamsList() {
+  public java.util.List<internal.andreiva.concursmotociclism.TeamRpc> getTeamsList() {
     return teams_;
   }
   /**
-   * <code>repeated .Team teams = 1;</code>
+   * <code>repeated .TeamRpc teams = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends internal.andreiva.concursmotociclism.TeamOrBuilder> 
+  public java.util.List<? extends internal.andreiva.concursmotociclism.TeamRpcOrBuilder> 
       getTeamsOrBuilderList() {
     return teams_;
   }
   /**
-   * <code>repeated .Team teams = 1;</code>
+   * <code>repeated .TeamRpc teams = 1;</code>
    */
   @java.lang.Override
   public int getTeamsCount() {
     return teams_.size();
   }
   /**
-   * <code>repeated .Team teams = 1;</code>
+   * <code>repeated .TeamRpc teams = 1;</code>
    */
   @java.lang.Override
-  public internal.andreiva.concursmotociclism.Team getTeams(int index) {
+  public internal.andreiva.concursmotociclism.TeamRpc getTeams(int index) {
     return teams_.get(index);
   }
   /**
-   * <code>repeated .Team teams = 1;</code>
+   * <code>repeated .TeamRpc teams = 1;</code>
    */
   @java.lang.Override
-  public internal.andreiva.concursmotociclism.TeamOrBuilder getTeamsOrBuilder(
+  public internal.andreiva.concursmotociclism.TeamRpcOrBuilder getTeamsOrBuilder(
       int index) {
     return teams_.get(index);
   }
@@ -397,9 +397,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              internal.andreiva.concursmotociclism.Team m =
+              internal.andreiva.concursmotociclism.TeamRpc m =
                   input.readMessage(
-                      internal.andreiva.concursmotociclism.Team.parser(),
+                      internal.andreiva.concursmotociclism.TeamRpc.parser(),
                       extensionRegistry);
               if (teamsBuilder_ == null) {
                 ensureTeamsIsMutable();
@@ -426,22 +426,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<internal.andreiva.concursmotociclism.Team> teams_ =
+    private java.util.List<internal.andreiva.concursmotociclism.TeamRpc> teams_ =
       java.util.Collections.emptyList();
     private void ensureTeamsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        teams_ = new java.util.ArrayList<internal.andreiva.concursmotociclism.Team>(teams_);
+        teams_ = new java.util.ArrayList<internal.andreiva.concursmotociclism.TeamRpc>(teams_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        internal.andreiva.concursmotociclism.Team, internal.andreiva.concursmotociclism.Team.Builder, internal.andreiva.concursmotociclism.TeamOrBuilder> teamsBuilder_;
+        internal.andreiva.concursmotociclism.TeamRpc, internal.andreiva.concursmotociclism.TeamRpc.Builder, internal.andreiva.concursmotociclism.TeamRpcOrBuilder> teamsBuilder_;
 
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
-    public java.util.List<internal.andreiva.concursmotociclism.Team> getTeamsList() {
+    public java.util.List<internal.andreiva.concursmotociclism.TeamRpc> getTeamsList() {
       if (teamsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(teams_);
       } else {
@@ -449,7 +449,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
     public int getTeamsCount() {
       if (teamsBuilder_ == null) {
@@ -459,9 +459,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
-    public internal.andreiva.concursmotociclism.Team getTeams(int index) {
+    public internal.andreiva.concursmotociclism.TeamRpc getTeams(int index) {
       if (teamsBuilder_ == null) {
         return teams_.get(index);
       } else {
@@ -469,10 +469,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
     public Builder setTeams(
-        int index, internal.andreiva.concursmotociclism.Team value) {
+        int index, internal.andreiva.concursmotociclism.TeamRpc value) {
       if (teamsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -486,10 +486,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
     public Builder setTeams(
-        int index, internal.andreiva.concursmotociclism.Team.Builder builderForValue) {
+        int index, internal.andreiva.concursmotociclism.TeamRpc.Builder builderForValue) {
       if (teamsBuilder_ == null) {
         ensureTeamsIsMutable();
         teams_.set(index, builderForValue.build());
@@ -500,9 +500,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
-    public Builder addTeams(internal.andreiva.concursmotociclism.Team value) {
+    public Builder addTeams(internal.andreiva.concursmotociclism.TeamRpc value) {
       if (teamsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -516,10 +516,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
     public Builder addTeams(
-        int index, internal.andreiva.concursmotociclism.Team value) {
+        int index, internal.andreiva.concursmotociclism.TeamRpc value) {
       if (teamsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -533,10 +533,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
     public Builder addTeams(
-        internal.andreiva.concursmotociclism.Team.Builder builderForValue) {
+        internal.andreiva.concursmotociclism.TeamRpc.Builder builderForValue) {
       if (teamsBuilder_ == null) {
         ensureTeamsIsMutable();
         teams_.add(builderForValue.build());
@@ -547,10 +547,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
     public Builder addTeams(
-        int index, internal.andreiva.concursmotociclism.Team.Builder builderForValue) {
+        int index, internal.andreiva.concursmotociclism.TeamRpc.Builder builderForValue) {
       if (teamsBuilder_ == null) {
         ensureTeamsIsMutable();
         teams_.add(index, builderForValue.build());
@@ -561,10 +561,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
     public Builder addAllTeams(
-        java.lang.Iterable<? extends internal.andreiva.concursmotociclism.Team> values) {
+        java.lang.Iterable<? extends internal.andreiva.concursmotociclism.TeamRpc> values) {
       if (teamsBuilder_ == null) {
         ensureTeamsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -576,7 +576,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
     public Builder clearTeams() {
       if (teamsBuilder_ == null) {
@@ -589,7 +589,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
     public Builder removeTeams(int index) {
       if (teamsBuilder_ == null) {
@@ -602,16 +602,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
-    public internal.andreiva.concursmotociclism.Team.Builder getTeamsBuilder(
+    public internal.andreiva.concursmotociclism.TeamRpc.Builder getTeamsBuilder(
         int index) {
       return internalGetTeamsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
-    public internal.andreiva.concursmotociclism.TeamOrBuilder getTeamsOrBuilder(
+    public internal.andreiva.concursmotociclism.TeamRpcOrBuilder getTeamsOrBuilder(
         int index) {
       if (teamsBuilder_ == null) {
         return teams_.get(index);  } else {
@@ -619,9 +619,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
-    public java.util.List<? extends internal.andreiva.concursmotociclism.TeamOrBuilder> 
+    public java.util.List<? extends internal.andreiva.concursmotociclism.TeamRpcOrBuilder> 
          getTeamsOrBuilderList() {
       if (teamsBuilder_ != null) {
         return teamsBuilder_.getMessageOrBuilderList();
@@ -630,33 +630,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
-    public internal.andreiva.concursmotociclism.Team.Builder addTeamsBuilder() {
+    public internal.andreiva.concursmotociclism.TeamRpc.Builder addTeamsBuilder() {
       return internalGetTeamsFieldBuilder().addBuilder(
-          internal.andreiva.concursmotociclism.Team.getDefaultInstance());
+          internal.andreiva.concursmotociclism.TeamRpc.getDefaultInstance());
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
-    public internal.andreiva.concursmotociclism.Team.Builder addTeamsBuilder(
+    public internal.andreiva.concursmotociclism.TeamRpc.Builder addTeamsBuilder(
         int index) {
       return internalGetTeamsFieldBuilder().addBuilder(
-          index, internal.andreiva.concursmotociclism.Team.getDefaultInstance());
+          index, internal.andreiva.concursmotociclism.TeamRpc.getDefaultInstance());
     }
     /**
-     * <code>repeated .Team teams = 1;</code>
+     * <code>repeated .TeamRpc teams = 1;</code>
      */
-    public java.util.List<internal.andreiva.concursmotociclism.Team.Builder> 
+    public java.util.List<internal.andreiva.concursmotociclism.TeamRpc.Builder> 
          getTeamsBuilderList() {
       return internalGetTeamsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
-        internal.andreiva.concursmotociclism.Team, internal.andreiva.concursmotociclism.Team.Builder, internal.andreiva.concursmotociclism.TeamOrBuilder> 
+        internal.andreiva.concursmotociclism.TeamRpc, internal.andreiva.concursmotociclism.TeamRpc.Builder, internal.andreiva.concursmotociclism.TeamRpcOrBuilder> 
         internalGetTeamsFieldBuilder() {
       if (teamsBuilder_ == null) {
         teamsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            internal.andreiva.concursmotociclism.Team, internal.andreiva.concursmotociclism.Team.Builder, internal.andreiva.concursmotociclism.TeamOrBuilder>(
+            internal.andreiva.concursmotociclism.TeamRpc, internal.andreiva.concursmotociclism.TeamRpc.Builder, internal.andreiva.concursmotociclism.TeamRpcOrBuilder>(
                 teams_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),

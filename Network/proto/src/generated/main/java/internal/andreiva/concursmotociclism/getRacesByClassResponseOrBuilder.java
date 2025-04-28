@@ -10,26 +10,26 @@ public interface getRacesByClassResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .Race races = 1;</code>
+   * <code>repeated .RaceRpc races = 1;</code>
    */
-  java.util.List<internal.andreiva.concursmotociclism.Race> 
+  java.util.List<internal.andreiva.concursmotociclism.RaceRpc> 
       getRacesList();
   /**
-   * <code>repeated .Race races = 1;</code>
+   * <code>repeated .RaceRpc races = 1;</code>
    */
-  internal.andreiva.concursmotociclism.Race getRaces(int index);
+  internal.andreiva.concursmotociclism.RaceRpc getRaces(int index);
   /**
-   * <code>repeated .Race races = 1;</code>
+   * <code>repeated .RaceRpc races = 1;</code>
    */
   int getRacesCount();
   /**
-   * <code>repeated .Race races = 1;</code>
+   * <code>repeated .RaceRpc races = 1;</code>
    */
-  java.util.List<? extends internal.andreiva.concursmotociclism.RaceOrBuilder> 
+  java.util.List<? extends internal.andreiva.concursmotociclism.RaceRpcOrBuilder> 
       getRacesOrBuilderList();
   /**
-   * <code>repeated .Race races = 1;</code>
+   * <code>repeated .RaceRpc races = 1;</code>
    */
-  internal.andreiva.concursmotociclism.RaceOrBuilder getRacesOrBuilder(
+  internal.andreiva.concursmotociclism.RaceRpcOrBuilder getRacesOrBuilder(
       int index);
 }

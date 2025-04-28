@@ -45,41 +45,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int RACES_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<internal.andreiva.concursmotociclism.Race> races_;
+  private java.util.List<internal.andreiva.concursmotociclism.RaceRpc> races_;
   /**
-   * <code>repeated .Race races = 1;</code>
+   * <code>repeated .RaceRpc races = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<internal.andreiva.concursmotociclism.Race> getRacesList() {
+  public java.util.List<internal.andreiva.concursmotociclism.RaceRpc> getRacesList() {
     return races_;
   }
   /**
-   * <code>repeated .Race races = 1;</code>
+   * <code>repeated .RaceRpc races = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends internal.andreiva.concursmotociclism.RaceOrBuilder> 
+  public java.util.List<? extends internal.andreiva.concursmotociclism.RaceRpcOrBuilder> 
       getRacesOrBuilderList() {
     return races_;
   }
   /**
-   * <code>repeated .Race races = 1;</code>
+   * <code>repeated .RaceRpc races = 1;</code>
    */
   @java.lang.Override
   public int getRacesCount() {
     return races_.size();
   }
   /**
-   * <code>repeated .Race races = 1;</code>
+   * <code>repeated .RaceRpc races = 1;</code>
    */
   @java.lang.Override
-  public internal.andreiva.concursmotociclism.Race getRaces(int index) {
+  public internal.andreiva.concursmotociclism.RaceRpc getRaces(int index) {
     return races_.get(index);
   }
   /**
-   * <code>repeated .Race races = 1;</code>
+   * <code>repeated .RaceRpc races = 1;</code>
    */
   @java.lang.Override
-  public internal.andreiva.concursmotociclism.RaceOrBuilder getRacesOrBuilder(
+  public internal.andreiva.concursmotociclism.RaceRpcOrBuilder getRacesOrBuilder(
       int index) {
     return races_.get(index);
   }
@@ -397,9 +397,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              internal.andreiva.concursmotociclism.Race m =
+              internal.andreiva.concursmotociclism.RaceRpc m =
                   input.readMessage(
-                      internal.andreiva.concursmotociclism.Race.parser(),
+                      internal.andreiva.concursmotociclism.RaceRpc.parser(),
                       extensionRegistry);
               if (racesBuilder_ == null) {
                 ensureRacesIsMutable();
@@ -426,22 +426,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<internal.andreiva.concursmotociclism.Race> races_ =
+    private java.util.List<internal.andreiva.concursmotociclism.RaceRpc> races_ =
       java.util.Collections.emptyList();
     private void ensureRacesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        races_ = new java.util.ArrayList<internal.andreiva.concursmotociclism.Race>(races_);
+        races_ = new java.util.ArrayList<internal.andreiva.concursmotociclism.RaceRpc>(races_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        internal.andreiva.concursmotociclism.Race, internal.andreiva.concursmotociclism.Race.Builder, internal.andreiva.concursmotociclism.RaceOrBuilder> racesBuilder_;
+        internal.andreiva.concursmotociclism.RaceRpc, internal.andreiva.concursmotociclism.RaceRpc.Builder, internal.andreiva.concursmotociclism.RaceRpcOrBuilder> racesBuilder_;
 
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
-    public java.util.List<internal.andreiva.concursmotociclism.Race> getRacesList() {
+    public java.util.List<internal.andreiva.concursmotociclism.RaceRpc> getRacesList() {
       if (racesBuilder_ == null) {
         return java.util.Collections.unmodifiableList(races_);
       } else {
@@ -449,7 +449,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
     public int getRacesCount() {
       if (racesBuilder_ == null) {
@@ -459,9 +459,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
-    public internal.andreiva.concursmotociclism.Race getRaces(int index) {
+    public internal.andreiva.concursmotociclism.RaceRpc getRaces(int index) {
       if (racesBuilder_ == null) {
         return races_.get(index);
       } else {
@@ -469,10 +469,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
     public Builder setRaces(
-        int index, internal.andreiva.concursmotociclism.Race value) {
+        int index, internal.andreiva.concursmotociclism.RaceRpc value) {
       if (racesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -486,10 +486,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
     public Builder setRaces(
-        int index, internal.andreiva.concursmotociclism.Race.Builder builderForValue) {
+        int index, internal.andreiva.concursmotociclism.RaceRpc.Builder builderForValue) {
       if (racesBuilder_ == null) {
         ensureRacesIsMutable();
         races_.set(index, builderForValue.build());
@@ -500,9 +500,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
-    public Builder addRaces(internal.andreiva.concursmotociclism.Race value) {
+    public Builder addRaces(internal.andreiva.concursmotociclism.RaceRpc value) {
       if (racesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -516,10 +516,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
     public Builder addRaces(
-        int index, internal.andreiva.concursmotociclism.Race value) {
+        int index, internal.andreiva.concursmotociclism.RaceRpc value) {
       if (racesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -533,10 +533,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
     public Builder addRaces(
-        internal.andreiva.concursmotociclism.Race.Builder builderForValue) {
+        internal.andreiva.concursmotociclism.RaceRpc.Builder builderForValue) {
       if (racesBuilder_ == null) {
         ensureRacesIsMutable();
         races_.add(builderForValue.build());
@@ -547,10 +547,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
     public Builder addRaces(
-        int index, internal.andreiva.concursmotociclism.Race.Builder builderForValue) {
+        int index, internal.andreiva.concursmotociclism.RaceRpc.Builder builderForValue) {
       if (racesBuilder_ == null) {
         ensureRacesIsMutable();
         races_.add(index, builderForValue.build());
@@ -561,10 +561,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
     public Builder addAllRaces(
-        java.lang.Iterable<? extends internal.andreiva.concursmotociclism.Race> values) {
+        java.lang.Iterable<? extends internal.andreiva.concursmotociclism.RaceRpc> values) {
       if (racesBuilder_ == null) {
         ensureRacesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -576,7 +576,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
     public Builder clearRaces() {
       if (racesBuilder_ == null) {
@@ -589,7 +589,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
     public Builder removeRaces(int index) {
       if (racesBuilder_ == null) {
@@ -602,16 +602,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
-    public internal.andreiva.concursmotociclism.Race.Builder getRacesBuilder(
+    public internal.andreiva.concursmotociclism.RaceRpc.Builder getRacesBuilder(
         int index) {
       return internalGetRacesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
-    public internal.andreiva.concursmotociclism.RaceOrBuilder getRacesOrBuilder(
+    public internal.andreiva.concursmotociclism.RaceRpcOrBuilder getRacesOrBuilder(
         int index) {
       if (racesBuilder_ == null) {
         return races_.get(index);  } else {
@@ -619,9 +619,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
-    public java.util.List<? extends internal.andreiva.concursmotociclism.RaceOrBuilder> 
+    public java.util.List<? extends internal.andreiva.concursmotociclism.RaceRpcOrBuilder> 
          getRacesOrBuilderList() {
       if (racesBuilder_ != null) {
         return racesBuilder_.getMessageOrBuilderList();
@@ -630,33 +630,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
-    public internal.andreiva.concursmotociclism.Race.Builder addRacesBuilder() {
+    public internal.andreiva.concursmotociclism.RaceRpc.Builder addRacesBuilder() {
       return internalGetRacesFieldBuilder().addBuilder(
-          internal.andreiva.concursmotociclism.Race.getDefaultInstance());
+          internal.andreiva.concursmotociclism.RaceRpc.getDefaultInstance());
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
-    public internal.andreiva.concursmotociclism.Race.Builder addRacesBuilder(
+    public internal.andreiva.concursmotociclism.RaceRpc.Builder addRacesBuilder(
         int index) {
       return internalGetRacesFieldBuilder().addBuilder(
-          index, internal.andreiva.concursmotociclism.Race.getDefaultInstance());
+          index, internal.andreiva.concursmotociclism.RaceRpc.getDefaultInstance());
     }
     /**
-     * <code>repeated .Race races = 1;</code>
+     * <code>repeated .RaceRpc races = 1;</code>
      */
-    public java.util.List<internal.andreiva.concursmotociclism.Race.Builder> 
+    public java.util.List<internal.andreiva.concursmotociclism.RaceRpc.Builder> 
          getRacesBuilderList() {
       return internalGetRacesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
-        internal.andreiva.concursmotociclism.Race, internal.andreiva.concursmotociclism.Race.Builder, internal.andreiva.concursmotociclism.RaceOrBuilder> 
+        internal.andreiva.concursmotociclism.RaceRpc, internal.andreiva.concursmotociclism.RaceRpc.Builder, internal.andreiva.concursmotociclism.RaceRpcOrBuilder> 
         internalGetRacesFieldBuilder() {
       if (racesBuilder_ == null) {
         racesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            internal.andreiva.concursmotociclism.Race, internal.andreiva.concursmotociclism.Race.Builder, internal.andreiva.concursmotociclism.RaceOrBuilder>(
+            internal.andreiva.concursmotociclism.RaceRpc, internal.andreiva.concursmotociclism.RaceRpc.Builder, internal.andreiva.concursmotociclism.RaceRpcOrBuilder>(
                 races_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),

@@ -6,12 +6,12 @@
 package internal.andreiva.concursmotociclism;
 
 /**
- * Protobuf type {@code User}
+ * Protobuf type {@code TeamRpc}
  */
-public final class User extends
+public final class TeamRpc extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:User)
-    UserOrBuilder {
+    // @@protoc_insertion_point(message_implements:TeamRpc)
+    TeamRpcOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -20,29 +20,28 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 30,
       /* patch= */ 1,
       /* suffix= */ "",
-      User.class.getName());
+      TeamRpc.class.getName());
   }
-  // Use User.newBuilder() to construct.
-  private User(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use TeamRpc.newBuilder() to construct.
+  private TeamRpc(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private User() {
+  private TeamRpc() {
     id_ = "";
-    username_ = "";
-    password_ = "";
+    name_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return internal.andreiva.concursmotociclism.Domain.internal_static_User_descriptor;
+    return internal.andreiva.concursmotociclism.Domain.internal_static_TeamRpc_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return internal.andreiva.concursmotociclism.Domain.internal_static_User_fieldAccessorTable
+    return internal.andreiva.concursmotociclism.Domain.internal_static_TeamRpc_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            internal.andreiva.concursmotociclism.User.class, internal.andreiva.concursmotociclism.User.Builder.class);
+            internal.andreiva.concursmotociclism.TeamRpc.class, internal.andreiva.concursmotociclism.TeamRpc.Builder.class);
   }
 
   public static final int ID_FIELD_NUMBER = 1;
@@ -84,78 +83,39 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int USERNAME_FIELD_NUMBER = 2;
+  public static final int NAME_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object username_ = "";
+  private volatile java.lang.Object name_ = "";
   /**
-   * <code>string username = 2;</code>
-   * @return The username.
+   * <code>string name = 2;</code>
+   * @return The name.
    */
   @java.lang.Override
-  public java.lang.String getUsername() {
-    java.lang.Object ref = username_;
+  public java.lang.String getName() {
+    java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      username_ = s;
+      name_ = s;
       return s;
     }
   }
   /**
-   * <code>string username = 2;</code>
-   * @return The bytes for username.
+   * <code>string name = 2;</code>
+   * @return The bytes for name.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getUsernameBytes() {
-    java.lang.Object ref = username_;
+      getNameBytes() {
+    java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      username_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int PASSWORD_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object password_ = "";
-  /**
-   * <code>string password = 3;</code>
-   * @return The password.
-   */
-  @java.lang.Override
-  public java.lang.String getPassword() {
-    java.lang.Object ref = password_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      password_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string password = 3;</code>
-   * @return The bytes for password.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getPasswordBytes() {
-    java.lang.Object ref = password_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      password_ = b;
+      name_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -179,11 +139,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, id_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(username_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, username_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(password_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 3, password_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, name_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -197,11 +154,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, id_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(username_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, username_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(password_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, password_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, name_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -213,17 +167,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof internal.andreiva.concursmotociclism.User)) {
+    if (!(obj instanceof internal.andreiva.concursmotociclism.TeamRpc)) {
       return super.equals(obj);
     }
-    internal.andreiva.concursmotociclism.User other = (internal.andreiva.concursmotociclism.User) obj;
+    internal.andreiva.concursmotociclism.TeamRpc other = (internal.andreiva.concursmotociclism.TeamRpc) obj;
 
     if (!getId()
         .equals(other.getId())) return false;
-    if (!getUsername()
-        .equals(other.getUsername())) return false;
-    if (!getPassword()
-        .equals(other.getPassword())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -237,53 +189,51 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + getId().hashCode();
-    hash = (37 * hash) + USERNAME_FIELD_NUMBER;
-    hash = (53 * hash) + getUsername().hashCode();
-    hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
-    hash = (53 * hash) + getPassword().hashCode();
+    hash = (37 * hash) + NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static internal.andreiva.concursmotociclism.User parseFrom(
+  public static internal.andreiva.concursmotociclism.TeamRpc parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static internal.andreiva.concursmotociclism.User parseFrom(
+  public static internal.andreiva.concursmotociclism.TeamRpc parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static internal.andreiva.concursmotociclism.User parseFrom(
+  public static internal.andreiva.concursmotociclism.TeamRpc parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static internal.andreiva.concursmotociclism.User parseFrom(
+  public static internal.andreiva.concursmotociclism.TeamRpc parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static internal.andreiva.concursmotociclism.User parseFrom(byte[] data)
+  public static internal.andreiva.concursmotociclism.TeamRpc parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static internal.andreiva.concursmotociclism.User parseFrom(
+  public static internal.andreiva.concursmotociclism.TeamRpc parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static internal.andreiva.concursmotociclism.User parseFrom(java.io.InputStream input)
+  public static internal.andreiva.concursmotociclism.TeamRpc parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static internal.andreiva.concursmotociclism.User parseFrom(
+  public static internal.andreiva.concursmotociclism.TeamRpc parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -291,26 +241,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static internal.andreiva.concursmotociclism.User parseDelimitedFrom(java.io.InputStream input)
+  public static internal.andreiva.concursmotociclism.TeamRpc parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static internal.andreiva.concursmotociclism.User parseDelimitedFrom(
+  public static internal.andreiva.concursmotociclism.TeamRpc parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static internal.andreiva.concursmotociclism.User parseFrom(
+  public static internal.andreiva.concursmotociclism.TeamRpc parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static internal.andreiva.concursmotociclism.User parseFrom(
+  public static internal.andreiva.concursmotociclism.TeamRpc parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -323,7 +273,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(internal.andreiva.concursmotociclism.User prototype) {
+  public static Builder newBuilder(internal.andreiva.concursmotociclism.TeamRpc prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -339,26 +289,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code User}
+   * Protobuf type {@code TeamRpc}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:User)
-      internal.andreiva.concursmotociclism.UserOrBuilder {
+      // @@protoc_insertion_point(builder_implements:TeamRpc)
+      internal.andreiva.concursmotociclism.TeamRpcOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return internal.andreiva.concursmotociclism.Domain.internal_static_User_descriptor;
+      return internal.andreiva.concursmotociclism.Domain.internal_static_TeamRpc_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return internal.andreiva.concursmotociclism.Domain.internal_static_User_fieldAccessorTable
+      return internal.andreiva.concursmotociclism.Domain.internal_static_TeamRpc_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              internal.andreiva.concursmotociclism.User.class, internal.andreiva.concursmotociclism.User.Builder.class);
+              internal.andreiva.concursmotociclism.TeamRpc.class, internal.andreiva.concursmotociclism.TeamRpc.Builder.class);
     }
 
-    // Construct using internal.andreiva.concursmotociclism.User.newBuilder()
+    // Construct using internal.andreiva.concursmotociclism.TeamRpc.newBuilder()
     private Builder() {
 
     }
@@ -373,25 +323,24 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       id_ = "";
-      username_ = "";
-      password_ = "";
+      name_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return internal.andreiva.concursmotociclism.Domain.internal_static_User_descriptor;
+      return internal.andreiva.concursmotociclism.Domain.internal_static_TeamRpc_descriptor;
     }
 
     @java.lang.Override
-    public internal.andreiva.concursmotociclism.User getDefaultInstanceForType() {
-      return internal.andreiva.concursmotociclism.User.getDefaultInstance();
+    public internal.andreiva.concursmotociclism.TeamRpc getDefaultInstanceForType() {
+      return internal.andreiva.concursmotociclism.TeamRpc.getDefaultInstance();
     }
 
     @java.lang.Override
-    public internal.andreiva.concursmotociclism.User build() {
-      internal.andreiva.concursmotociclism.User result = buildPartial();
+    public internal.andreiva.concursmotociclism.TeamRpc build() {
+      internal.andreiva.concursmotociclism.TeamRpc result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -399,51 +348,43 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public internal.andreiva.concursmotociclism.User buildPartial() {
-      internal.andreiva.concursmotociclism.User result = new internal.andreiva.concursmotociclism.User(this);
+    public internal.andreiva.concursmotociclism.TeamRpc buildPartial() {
+      internal.andreiva.concursmotociclism.TeamRpc result = new internal.andreiva.concursmotociclism.TeamRpc(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(internal.andreiva.concursmotociclism.User result) {
+    private void buildPartial0(internal.andreiva.concursmotociclism.TeamRpc result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.id_ = id_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.username_ = username_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.password_ = password_;
+        result.name_ = name_;
       }
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof internal.andreiva.concursmotociclism.User) {
-        return mergeFrom((internal.andreiva.concursmotociclism.User)other);
+      if (other instanceof internal.andreiva.concursmotociclism.TeamRpc) {
+        return mergeFrom((internal.andreiva.concursmotociclism.TeamRpc)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(internal.andreiva.concursmotociclism.User other) {
-      if (other == internal.andreiva.concursmotociclism.User.getDefaultInstance()) return this;
+    public Builder mergeFrom(internal.andreiva.concursmotociclism.TeamRpc other) {
+      if (other == internal.andreiva.concursmotociclism.TeamRpc.getDefaultInstance()) return this;
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getUsername().isEmpty()) {
-        username_ = other.username_;
+      if (!other.getName().isEmpty()) {
+        name_ = other.name_;
         bitField0_ |= 0x00000002;
-        onChanged();
-      }
-      if (!other.getPassword().isEmpty()) {
-        password_ = other.password_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -478,15 +419,10 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              username_ = input.readStringRequireUtf8();
+              name_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              password_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -576,167 +512,95 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object username_ = "";
+    private java.lang.Object name_ = "";
     /**
-     * <code>string username = 2;</code>
-     * @return The username.
+     * <code>string name = 2;</code>
+     * @return The name.
      */
-    public java.lang.String getUsername() {
-      java.lang.Object ref = username_;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        username_ = s;
+        name_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string username = 2;</code>
-     * @return The bytes for username.
+     * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
-        getUsernameBytes() {
-      java.lang.Object ref = username_;
+        getNameBytes() {
+      java.lang.Object ref = name_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        username_ = b;
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string username = 2;</code>
-     * @param value The username to set.
+     * <code>string name = 2;</code>
+     * @param value The name to set.
      * @return This builder for chaining.
      */
-    public Builder setUsername(
+    public Builder setName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      username_ = value;
+      name_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string username = 2;</code>
+     * <code>string name = 2;</code>
      * @return This builder for chaining.
      */
-    public Builder clearUsername() {
-      username_ = getDefaultInstance().getUsername();
+    public Builder clearName() {
+      name_ = getDefaultInstance().getName();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string username = 2;</code>
-     * @param value The bytes for username to set.
+     * <code>string name = 2;</code>
+     * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
-    public Builder setUsernameBytes(
+    public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      username_ = value;
+      name_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
 
-    private java.lang.Object password_ = "";
-    /**
-     * <code>string password = 3;</code>
-     * @return The password.
-     */
-    public java.lang.String getPassword() {
-      java.lang.Object ref = password_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        password_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string password = 3;</code>
-     * @return The bytes for password.
-     */
-    public com.google.protobuf.ByteString
-        getPasswordBytes() {
-      java.lang.Object ref = password_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        password_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string password = 3;</code>
-     * @param value The password to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPassword(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      password_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string password = 3;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearPassword() {
-      password_ = getDefaultInstance().getPassword();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string password = 3;</code>
-     * @param value The bytes for password to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPasswordBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      password_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    // @@protoc_insertion_point(builder_scope:User)
+    // @@protoc_insertion_point(builder_scope:TeamRpc)
   }
 
-  // @@protoc_insertion_point(class_scope:User)
-  private static final internal.andreiva.concursmotociclism.User DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:TeamRpc)
+  private static final internal.andreiva.concursmotociclism.TeamRpc DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new internal.andreiva.concursmotociclism.User();
+    DEFAULT_INSTANCE = new internal.andreiva.concursmotociclism.TeamRpc();
   }
 
-  public static internal.andreiva.concursmotociclism.User getDefaultInstance() {
+  public static internal.andreiva.concursmotociclism.TeamRpc getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<User>
-      PARSER = new com.google.protobuf.AbstractParser<User>() {
+  private static final com.google.protobuf.Parser<TeamRpc>
+      PARSER = new com.google.protobuf.AbstractParser<TeamRpc>() {
     @java.lang.Override
-    public User parsePartialFrom(
+    public TeamRpc parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -755,17 +619,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<User> parser() {
+  public static com.google.protobuf.Parser<TeamRpc> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<User> getParserForType() {
+  public com.google.protobuf.Parser<TeamRpc> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public internal.andreiva.concursmotociclism.User getDefaultInstanceForType() {
+  public internal.andreiva.concursmotociclism.TeamRpc getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

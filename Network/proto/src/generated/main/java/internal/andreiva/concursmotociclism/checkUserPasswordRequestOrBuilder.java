@@ -10,17 +10,17 @@ public interface checkUserPasswordRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.User user = 1;</code>
+   * <code>.UserRpc user = 1;</code>
    * @return Whether the user field is set.
    */
   boolean hasUser();
   /**
-   * <code>.User user = 1;</code>
+   * <code>.UserRpc user = 1;</code>
    * @return The user.
    */
-  internal.andreiva.concursmotociclism.User getUser();
+  internal.andreiva.concursmotociclism.UserRpc getUser();
   /**
-   * <code>.User user = 1;</code>
+   * <code>.UserRpc user = 1;</code>
    */
-  internal.andreiva.concursmotociclism.UserOrBuilder getUserOrBuilder();
+  internal.andreiva.concursmotociclism.UserRpcOrBuilder getUserOrBuilder();
 }
