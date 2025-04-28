@@ -418,6 +418,37 @@ public final class ProxyServiceGrpc {
     return getGetRaceByNameMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<internal.andreiva.concursmotociclism.EmptyRequest,
+      internal.andreiva.concursmotociclism.UpdateResponse> getSubscribeToUpdatesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SubscribeToUpdates",
+      requestType = internal.andreiva.concursmotociclism.EmptyRequest.class,
+      responseType = internal.andreiva.concursmotociclism.UpdateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<internal.andreiva.concursmotociclism.EmptyRequest,
+      internal.andreiva.concursmotociclism.UpdateResponse> getSubscribeToUpdatesMethod() {
+    io.grpc.MethodDescriptor<internal.andreiva.concursmotociclism.EmptyRequest, internal.andreiva.concursmotociclism.UpdateResponse> getSubscribeToUpdatesMethod;
+    if ((getSubscribeToUpdatesMethod = ProxyServiceGrpc.getSubscribeToUpdatesMethod) == null) {
+      synchronized (ProxyServiceGrpc.class) {
+        if ((getSubscribeToUpdatesMethod = ProxyServiceGrpc.getSubscribeToUpdatesMethod) == null) {
+          ProxyServiceGrpc.getSubscribeToUpdatesMethod = getSubscribeToUpdatesMethod =
+              io.grpc.MethodDescriptor.<internal.andreiva.concursmotociclism.EmptyRequest, internal.andreiva.concursmotociclism.UpdateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SubscribeToUpdates"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  internal.andreiva.concursmotociclism.EmptyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  internal.andreiva.concursmotociclism.UpdateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProxyServiceMethodDescriptorSupplier("SubscribeToUpdates"))
+              .build();
+        }
+      }
+    }
+    return getSubscribeToUpdatesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -571,6 +602,13 @@ public final class ProxyServiceGrpc {
         io.grpc.stub.StreamObserver<internal.andreiva.concursmotociclism.getRaceByNameResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRaceByNameMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void subscribeToUpdates(internal.andreiva.concursmotociclism.EmptyRequest request,
+        io.grpc.stub.StreamObserver<internal.andreiva.concursmotociclism.UpdateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSubscribeToUpdatesMethod(), responseObserver);
+    }
   }
 
   /**
@@ -703,6 +741,14 @@ public final class ProxyServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetRaceByNameMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void subscribeToUpdates(internal.andreiva.concursmotociclism.EmptyRequest request,
+        io.grpc.stub.StreamObserver<internal.andreiva.concursmotociclism.UpdateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getSubscribeToUpdatesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -811,6 +857,15 @@ public final class ProxyServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetRaceByNameMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, internal.andreiva.concursmotociclism.UpdateResponse>
+        subscribeToUpdates(internal.andreiva.concursmotociclism.EmptyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getSubscribeToUpdatesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -918,6 +973,14 @@ public final class ProxyServiceGrpc {
     public internal.andreiva.concursmotociclism.getRaceByNameResponse getRaceByName(internal.andreiva.concursmotociclism.getRaceByNameRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetRaceByNameMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<internal.andreiva.concursmotociclism.UpdateResponse> subscribeToUpdates(
+        internal.andreiva.concursmotociclism.EmptyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getSubscribeToUpdatesMethod(), getCallOptions(), request);
     }
   }
 
@@ -1055,6 +1118,7 @@ public final class ProxyServiceGrpc {
   private static final int METHODID_GET_ALL_RACES = 10;
   private static final int METHODID_ADD_RACE_REGISTRATION = 11;
   private static final int METHODID_GET_RACE_BY_NAME = 12;
+  private static final int METHODID_SUBSCRIBE_TO_UPDATES = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1124,6 +1188,10 @@ public final class ProxyServiceGrpc {
         case METHODID_GET_RACE_BY_NAME:
           serviceImpl.getRaceByName((internal.andreiva.concursmotociclism.getRaceByNameRequest) request,
               (io.grpc.stub.StreamObserver<internal.andreiva.concursmotociclism.getRaceByNameResponse>) responseObserver);
+          break;
+        case METHODID_SUBSCRIBE_TO_UPDATES:
+          serviceImpl.subscribeToUpdates((internal.andreiva.concursmotociclism.EmptyRequest) request,
+              (io.grpc.stub.StreamObserver<internal.andreiva.concursmotociclism.UpdateResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1234,6 +1302,13 @@ public final class ProxyServiceGrpc {
               internal.andreiva.concursmotociclism.getRaceByNameRequest,
               internal.andreiva.concursmotociclism.getRaceByNameResponse>(
                 service, METHODID_GET_RACE_BY_NAME)))
+        .addMethod(
+          getSubscribeToUpdatesMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              internal.andreiva.concursmotociclism.EmptyRequest,
+              internal.andreiva.concursmotociclism.UpdateResponse>(
+                service, METHODID_SUBSCRIBE_TO_UPDATES)))
         .build();
   }
 
@@ -1295,6 +1370,7 @@ public final class ProxyServiceGrpc {
               .addMethod(getGetAllRacesMethod())
               .addMethod(getAddRaceRegistrationMethod())
               .addMethod(getGetRaceByNameMethod())
+              .addMethod(getSubscribeToUpdatesMethod())
               .build();
         }
       }

@@ -35,7 +35,7 @@ public final class Service {
   static {
     java.lang.String[] descriptorData = {
       "\n\rservice.proto\032\014domain.proto\032\016response." +
-      "proto\032\rrequest.proto2\221\007\n\014ProxyService\022L\n" +
+      "proto\032\rrequest.proto2\311\007\n\014ProxyService\022L\n" +
       "\021checkUserPassword\022\031.checkUserPasswordRe" +
       "quest\032\032.checkUserPasswordResponse\"\000\022F\n\017g" +
       "etRacesByClass\022\027.getRacesByClassRequest\032" +
@@ -58,8 +58,10 @@ public final class Service {
       "E\n\023addRaceRegistration\022\033.addRaceRegistra" +
       "tionRequest\032\017.StatusResponse\"\000\022@\n\rgetRac" +
       "eByName\022\025.getRaceByNameRequest\032\026.getRace" +
-      "ByNameResponse\"\000B(\n$internal.andreiva.co" +
-      "ncursmotociclismP\001b\006proto3"
+      "ByNameResponse\"\000\0226\n\022SubscribeToUpdates\022\r" +
+      ".EmptyRequest\032\017.UpdateResponse0\001B(\n$inte" +
+      "rnal.andreiva.concursmotociclismP\001b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

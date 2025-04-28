@@ -85,6 +85,11 @@ public final class Response {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_StatusResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_UpdateResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_UpdateResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -110,8 +115,10 @@ public final class Response {
       "\003(\0132\010.RaceRpc\"/\n\025getRaceByNameResponse\022\026" +
       "\n\004race\030\001 \001(\0132\010.RaceRpc\"U\n\016StatusResponse" +
       "\022&\n\006status\030\001 \001(\0162\026.StatusResponse.Status" +
-      "\"\033\n\006Status\022\006\n\002OK\020\000\022\t\n\005ERROR\020\001B(\n$interna" +
-      "l.andreiva.concursmotociclismP\001b\006proto3"
+      "\"\033\n\006Status\022\006\n\002OK\020\000\022\t\n\005ERROR\020\001\"*\n\016UpdateR" +
+      "esponse\022\030\n\005event\030\001 \001(\0132\t.EventRpcB(\n$int" +
+      "ernal.andreiva.concursmotociclismP\001b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -190,6 +197,12 @@ public final class Response {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_StatusResponse_descriptor,
         new java.lang.String[] { "Status", });
+    internal_static_UpdateResponse_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_UpdateResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_UpdateResponse_descriptor,
+        new java.lang.String[] { "Event", });
     descriptor.resolveAllFeaturesImmutable();
     internal.andreiva.concursmotociclism.Domain.getDescriptor();
   }

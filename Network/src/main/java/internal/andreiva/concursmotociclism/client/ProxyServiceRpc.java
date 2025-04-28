@@ -9,6 +9,7 @@ import internal.andreiva.concursmotociclism.utils.EventType;
 import internal.andreiva.concursmotociclism.utils.Observer;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import io.grpc.stub.StreamObserver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -20,6 +21,7 @@ public class ProxyServiceRpc implements ObservableServiceInterface
     private final List<Observer> observers = new ArrayList<>();
     private final ManagedChannel channel;
     private final ProxyServiceGrpc.ProxyServiceBlockingStub blockingStub;
+    private final ProxyServiceGrpc.ProxyServiceStub observerStub;
 
     public ProxyServiceRpc(String host, int port)
     {
@@ -34,13 +36,37 @@ public class ProxyServiceRpc implements ObservableServiceInterface
     public ProxyServiceRpc(ManagedChannelBuilder<?> channelBuilder)
     {
         channel = channelBuilder.build();
+
         blockingStub = ProxyServiceGrpc.newBlockingStub(channel);
+        observerStub = ProxyServiceGrpc.newStub(channel);
+        observerStub.subscribeToUpdates(EmptyRequest.newBuilder().build(), new StreamObserver<UpdateResponse>()
+        {
+            @Override
+            public void onNext(UpdateResponse updateResponse)
+            {
+                var event = EventType.valueOf(updateResponse.getEvent().getType().name());
+                if (event == EventType.RaceRegistration)
+                    notifyObservers(event, updateResponse.getEvent().getRace());
+            }
+
+            @Override
+            public void onError(Throwable throwable)
+            {
+
+            }
+
+            @Override
+            public void onCompleted()
+            {
+
+            }
+        });
     }
 
     @Override
     public boolean checkUserPassword(String username, String password)
     {
-        var request = checkUserPasswordRequest.newBuilder().setUser(User.newBuilder().setUsername(username).setPassword(username)).build();
+        var request = checkUserPasswordRequest.newBuilder().setUser(UserRpc.newBuilder().setUsername(username).setPassword(password)).build();
         try
         {
            var response = blockingStub.checkUserPassword(request);
@@ -193,7 +219,7 @@ public class ProxyServiceRpc implements ObservableServiceInterface
     @Override
     public void addRacer(Racer racer)
     {
-        var request = addRacerRequest.newBuilder().setRacer(internal.andreiva.concursmotociclism.Racer.newBuilder().setId(racer.getId().toString())
+        var request = addRacerRequest.newBuilder().setRacer(internal.andreiva.concursmotociclism.RacerRpc.newBuilder().setId(racer.getId().toString())
                         .setName(racer.getName())
                         .setCnp(racer.getCNP()).build()).build();
         try
@@ -235,6 +261,10 @@ public class ProxyServiceRpc implements ObservableServiceInterface
     @Override
     public void addRaceRegistration(String racerName, String racerCNP, String teamName, String raceName)
     {
+        if (teamName == null || teamName.isEmpty())
+            teamName = "";
+        if (raceName == null || raceName.isEmpty())
+            raceName = "";
         var request = addRaceRegistrationRequest.newBuilder()
                 .setRacerName(racerName)
                 .setRacerCNP(racerCNP)
@@ -278,18 +308,22 @@ public class ProxyServiceRpc implements ObservableServiceInterface
     @Override
     public void registerObserver(Observer observer)
     {
-
+        observers.add(observer);
     }
 
     @Override
     public void unregisterObserver(Observer observer)
     {
-
+        observers.remove(observer);
     }
 
     @Override
     public void notifyObservers(EventType type, Object data)
     {
-
+        var raceRpc = (RaceRpc)data;
+        var race = new Race(UUID.fromString(raceRpc.getId()), raceRpc.getRaceClass(), raceRpc.getRaceName());
+        observers.forEach(observer -> observer.update(type, race));
     }
+
+
 }
